@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlalchemy>=2
+PyMySQL
+cryptography
+python-dotenv
+alembic
+pydantic
+pydantic_settings
+python-multipart
