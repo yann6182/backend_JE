@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 from app.api.v1 import client, dpgf, lot, section, element_ouvrage
 
 app = FastAPI(title='DPGF API')
@@ -12,6 +14,11 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
+
+# Monter les fichiers statiques (si nécessaire)
+static_dir = Path(__file__).parent.parent / "static"
+if static_dir.exists():
+    app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
 
 app.include_router(client.router, prefix='/api/v1')
 app.include_router(dpgf.router, prefix='/api/v1')

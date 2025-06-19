@@ -25,7 +25,7 @@
 *.log
 *.sql
 *.sqlite
-
+*.zip
 # OS generated files #
 ######################
 .DS_Store
