@@ -8,3 +8,7 @@ alembic
 pydantic
 pydantic_settings
 python-multipart
+pandas
+openpyxl
+numpy
+tqdm
