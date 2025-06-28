@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-26T22:14:21.454519",
+    "workflow_type": "optimized_folder_by_folder",
+    "configuration": {
+      "min_confidence": 0.3,
+      "max_files_per_folder": 1,
+      "batch_size": 1,
+      "deep_scan": false,
+      "auto_import": true
+    }
+  },
+  "statistics": {
+    "folders_processed": 0,
+    "folders_with_files": 0,
+    "total_files_found": 0,
+    "total_excel_files": 0,
+    "total_identified_files": 0,
+    "total_imported_files": 0,
+    "errors": [],
+    "start_time": "2025-06-26T22:14:20.828817",
+    "end_time": null
+  },
+  "detailed_results": []
+}

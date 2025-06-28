@@ -12,7 +12,7 @@ import argparse
 import pandas as pd
 from pathlib import Path
 import re
-from scripts.import_complete_improved import ExcelParser
+from scripts.import_complete import ExcelParser
 import sys
 
 def inspect_file(file_path):

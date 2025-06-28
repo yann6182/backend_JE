@@ -1,0 +1,226 @@
+{
+  "total_files": 7,
+  "successful": 3,
+  "failed": 4,
+  "timeout_optimizations": 0,
+  "time_saved_estimate": 1782.6658861637115,
+  "detailed_results": [
+    {
+      "file_name": "02_2024_024_BPU_lot_7.xlsx",
+      "file_path": "test_data\\02_2024_024_BPU_lot_7.xlsx",
+      "file_size_mb": 0.09059429168701172,
+      "complexity_score": 1.0,
+      "optimized_timeout": 182,
+      "success": true,
+      "error": "",
+      "total_time": 6.00702166557312,
+      "attempt_stats": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "duration": 5.0231099128723145,
+            "timeout_used": 182,
+            "return_code": 0,
+            "success": true
+          }
+        ],
+        "total_time": 5.0231099128723145,
+        "final_timeout": 182
+      }
+    },
+    {
+      "file_name": "25S012 - DPGF -Lot4.xlsx",
+      "file_path": "test_data\\25S012 - DPGF -Lot4.xlsx",
+      "file_size_mb": 0.09270477294921875,
+      "complexity_score": 1.0,
+      "optimized_timeout": 182,
+      "success": false,
+      "error": "Échec après toutes les tentatives",
+      "total_time": 884.2760939598083,
+      "attempt_stats": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "duration": 182.04784059524536,
+            "timeout_used": 182,
+            "return_code": "TIMEOUT",
+            "success": false
+          },
+          {
+            "attempt": 2,
+            "duration": 273.02009868621826,
+            "timeout_used": 273,
+            "return_code": "TIMEOUT",
+            "success": false
+          },
+          {
+            "attempt": 3,
+            "duration": 409.0367946624756,
+            "timeout_used": 409,
+            "return_code": "TIMEOUT",
+            "success": false
+          }
+        ],
+        "total_time": 864.1047339439392,
+        "final_timeout": 182
+      }
+    },
+    {
+      "file_name": "802 DPGF Lot 2 - Curage.xlsx",
+      "file_path": "test_data\\802 DPGF Lot 2 - Curage.xlsx",
+      "file_size_mb": 0.01972675323486328,
+      "complexity_score": 1.0,
+      "optimized_timeout": 180,
+      "success": false,
+      "error": "Échec après toutes les tentatives",
+      "total_time": 875.1917705535889,
+      "attempt_stats": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "duration": 180.03049278259277,
+            "timeout_used": 180,
+            "return_code": "TIMEOUT",
+            "success": false
+          },
+          {
+            "attempt": 2,
+            "duration": 270.0263819694519,
+            "timeout_used": 270,
+            "return_code": "TIMEOUT",
+            "success": false
+          },
+          {
+            "attempt": 3,
+            "duration": 405.05158138275146,
+            "timeout_used": 405,
+            "return_code": "TIMEOUT",
+            "success": false
+          }
+        ],
+        "total_time": 855.1084561347961,
+        "final_timeout": 180
+      }
+    },
+    {
+      "file_name": "803 DPGF Lot 3 - Gros-oeuvre - D├®molition.xlsx",
+      "file_path": "test_data\\803 DPGF Lot 3 - Gros-oeuvre - D├®molition.xlsx",
+      "file_size_mb": 0.02467632293701172,
+      "complexity_score": 1.0,
+      "optimized_timeout": 180,
+      "success": false,
+      "error": "Échec après toutes les tentatives",
+      "total_time": 875.2053234577179,
+      "attempt_stats": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "duration": 180.03851985931396,
+            "timeout_used": 180,
+            "return_code": "TIMEOUT",
+            "success": false
+          },
+          {
+            "attempt": 2,
+            "duration": 270.0427260398865,
+            "timeout_used": 270,
+            "return_code": "TIMEOUT",
+            "success": false
+          },
+          {
+            "attempt": 3,
+            "duration": 405.0243811607361,
+            "timeout_used": 405,
+            "return_code": "TIMEOUT",
+            "success": false
+          }
+        ],
+        "total_time": 855.1056270599365,
+        "final_timeout": 180
+      }
+    },
+    {
+      "file_name": "804 DPGF Lot 4 - Charpente & Ossature bois - Ind B.xlsx",
+      "file_path": "test_data\\804 DPGF Lot 4 - Charpente & Ossature bois - Ind B.xlsx",
+      "file_size_mb": 0.021944046020507812,
+      "complexity_score": 1.0,
+      "optimized_timeout": 180,
+      "success": false,
+      "error": "Échec après toutes les tentatives",
+      "total_time": 38153.293558359146,
+      "attempt_stats": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "duration": 180.0309717655182,
+            "timeout_used": 180,
+            "return_code": "TIMEOUT",
+            "success": false
+          },
+          {
+            "attempt": 2,
+            "duration": 270.04203701019287,
+            "timeout_used": 270,
+            "return_code": "TIMEOUT",
+            "success": false
+          },
+          {
+            "attempt": 3,
+            "duration": 37683.133101940155,
+            "timeout_used": 405,
+            "return_code": "TIMEOUT",
+            "success": false
+          }
+        ],
+        "total_time": 38133.206110715866,
+        "final_timeout": 180
+      }
+    },
+    {
+      "file_name": "DPGF-Lot 06 Métallerie-Serrurerie - Nov 2024.xlsx",
+      "file_path": "test_data\\DPGF-Lot 06 Métallerie-Serrurerie - Nov 2024.xlsx",
+      "file_size_mb": 0.0403900146484375,
+      "complexity_score": 1.2,
+      "optimized_timeout": 205,
+      "success": true,
+      "error": "",
+      "total_time": 7.112975358963013,
+      "attempt_stats": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "duration": 6.979823112487793,
+            "timeout_used": 205,
+            "return_code": 0,
+            "success": true
+          }
+        ],
+        "total_time": 6.979823112487793,
+        "final_timeout": 205
+      }
+    },
+    {
+      "file_name": "LOT 06 - DPGF - METALLERIE_.xlsx",
+      "file_path": "test_data\\LOT 06 - DPGF - METALLERIE_.xlsx",
+      "file_size_mb": 0.02310657501220703,
+      "complexity_score": 1.2,
+      "optimized_timeout": 204,
+      "success": true,
+      "error": "",
+      "total_time": 4.214116811752319,
+      "attempt_stats": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "duration": 4.123833179473877,
+            "timeout_used": 204,
+            "return_code": 0,
+            "success": true
+          }
+        ],
+        "total_time": 4.123833179473877,
+        "final_timeout": 204
+      }
+    }
+  ]
+}

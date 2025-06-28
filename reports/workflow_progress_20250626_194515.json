@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-26T19:45:15.754530",
+    "workflow_type": "optimized_folder_by_folder",
+    "configuration": {
+      "min_confidence": 0.3,
+      "max_files_per_folder": 1,
+      "batch_size": 1,
+      "deep_scan": false,
+      "auto_import": true
+    }
+  },
+  "statistics": {
+    "folders_processed": 1,
+    "folders_with_files": 1,
+    "total_files_found": 455,
+    "total_excel_files": 18,
+    "total_identified_files": 1,
+    "total_imported_files": 1,
+    "errors": [],
+    "start_time": "2025-06-26T19:45:00.763504",
+    "end_time": "2025-06-26T19:45:15.754530",
+    "total_processing_time": 14.991026
+  },
+  "detailed_results": [
+    {
+      "folder_path": "/0. A ENREGISTER SUR OPTIM",
+      "folder_name": "0. A ENREGISTER SUR OPTIM",
+      "processed_at": "2025-06-26T19:45:03.106114",
+      "status": "completed",
+      "files_found": 455,
+      "excel_files": 18,
+      "identified_files": [
+        {
+          "path": "/0. A ENREGISTER SUR OPTIM/06-27-2025-JUSSIEU-CONSTRUCTION_VESTIAIRE_STADE VNO/AWS-MPI-1655574-DCE_DCE/10_CDPGF_1_DCE_CDPGF Lot 1.xlsx",
+          "name": "10_CDPGF_1_DCE_CDPGF Lot 1.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 44763,
+          "modified": "2025-06-26T16:32:12Z",
+          "created": "2025-06-04T07:28:52Z",
+          "sharepoint_id": "01Z5OKNPTNUKERCIYICRDIDESY2V44MF4E",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B1189A26D-0823-4614-8192-58D579C61784%7D&file=10_CDPGF_1_DCE_CDPGF%20Lot%201.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/0. A ENREGISTER SUR OPTIM"
+        }
+      ],
+      "errors": [],
+      "processing_time": 9.985464334487915,
+      "import_result": {
+        "success": true,
+        "imported_count": 1,
+        "total_files": 1,
+        "message": "1/1 fichiers importés"
+      }
+    }
+  ]
+}

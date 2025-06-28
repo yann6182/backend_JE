@@ -1,0 +1,1064 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-27T00:40:11.681254",
+    "workflow_type": "optimized_folder_by_folder",
+    "configuration": {
+      "min_confidence": 0.3,
+      "max_files_per_folder": 10,
+      "batch_size": 1,
+      "deep_scan": false,
+      "auto_import": true
+    }
+  },
+  "statistics": {
+    "folders_processed": 10,
+    "folders_with_files": 9,
+    "total_files_found": 2852,
+    "total_excel_files": 96,
+    "total_identified_files": 48,
+    "total_imported_files": 48,
+    "errors": [],
+    "start_time": "2025-06-27T00:33:50.314210",
+    "end_time": "2025-06-27T00:40:11.679262",
+    "total_processing_time": 381.365052
+  },
+  "detailed_results": [
+    {
+      "folder_path": "/06-26-2025-CARTIER",
+      "folder_name": "06-26-2025-CARTIER",
+      "processed_at": "2025-06-27T00:33:50.835994",
+      "status": "completed",
+      "files_found": 12,
+      "excel_files": 0,
+      "identified_files": [],
+      "errors": [],
+      "processing_time": 0.2039778232574463
+    },
+    {
+      "folder_path": "/06-30-2025-LE_PLESSIS_ROBINSON-TRAVAUX_SERRURERIE",
+      "folder_name": "06-30-2025-LE_PLESSIS_ROBINSON-TRAVAUX_SERRURERIE",
+      "processed_at": "2025-06-27T00:33:51.039972",
+      "status": "completed",
+      "files_found": 45,
+      "excel_files": 2,
+      "identified_files": [
+        {
+          "path": "/06-30-2025-LE_PLESSIS_ROBINSON-TRAVAUX_SERRURERIE/leplessis/DCE_DCE_ MARCHE SERRURERIE/DCE- MARCHE SERRURERIE_BPU - MARCHE SERRURERIE.xls",
+          "name": "DCE- MARCHE SERRURERIE_BPU - MARCHE SERRURERIE.xls",
+          "type": "BPU",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.0,
+            "BPU": 0.5,
+            "DQE": 0.0
+          },
+          "size": 114176,
+          "modified": "2025-06-13T06:12:10Z",
+          "created": "2025-06-13T06:28:44Z",
+          "sharepoint_id": "01Z5OKNPQTCYMHB3SQDZGZWQAA6I3XBFB4",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B70181613-50EE-4D1E-9B40-00F23770943C%7D&file=DCE-%20MARCHE%20SERRURERIE_BPU%20-%20MARCHE%20SERRURERIE.xls&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-LE_PLESSIS_ROBINSON-TRAVAUX_SERRURERIE"
+        }
+      ],
+      "errors": [],
+      "processing_time": 1.9959335327148438,
+      "import_result": {
+        "success": true,
+        "imported_count": 1,
+        "total_files": 1,
+        "message": "1/1 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE",
+      "folder_name": "06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE",
+      "processed_at": "2025-06-27T00:33:55.364103",
+      "status": "completed",
+      "files_found": 116,
+      "excel_files": 6,
+      "identified_files": [
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ASCENSEUR_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ASCENSEUR_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 266231,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:51:02Z",
+          "sharepoint_id": "01Z5OKNPUQXQSPIANUKFCIBGVUN6ZWNHHV",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BF424BC90-B401-4451-809A-B46FB3669CF5%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_ASCENSEUR_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        },
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_CVC_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_CVC_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 204912,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:51:01Z",
+          "sharepoint_id": "01Z5OKNPW7T4Q4RT2365FYBMCCO7HN4Y4T",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BC8219FDF-5BCF-4BF7-80B0-4277CEDE6393%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_CVC_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        },
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ELECTRICITE_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ELECTRICITE_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 254110,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:50:58Z",
+          "sharepoint_id": "01Z5OKNPTUBCXIFCWRERFJ77DYFEDJMDFI",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B82AE0874-D18A-4A24-9FFC-782906960CA8%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_ELECTRICITE_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        },
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_MACONNERIE_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_MACONNERIE_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 238238,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:50:56Z",
+          "sharepoint_id": "01Z5OKNPVL2SNXW27Q2JAINAASV5SYQJVI",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B7B9BD4AB-F06B-40D2-8680-12AF658826A8%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_MACONNERIE_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        },
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_SPRINKLAGE_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_SPRINKLAGE_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 210716,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:50:54Z",
+          "sharepoint_id": "01Z5OKNPUYJXTZSB5DF5DJMNFUHCHRUSWG",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B99E74D98-A307-462F-9634-B4388F1A4AC6%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_SPRINKLAGE_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        },
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/PICHOURON_SAEMES_HECTOR MALOT_PRO DCE_DPGF.xlsx",
+          "name": "PICHOURON_SAEMES_HECTOR MALOT_PRO DCE_DPGF.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 109834,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:50:53Z",
+          "sharepoint_id": "01Z5OKNPTRZTUDHSBWXNCJ46NXKBXEFWBM",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B33E8CC71-36C8-44BB-9E79-B7506E42D82C%7D&file=PICHOURON_SAEMES_HECTOR%20MALOT_PRO%20DCE_DPGF.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        }
+      ],
+      "errors": [],
+      "processing_time": 6.8011794090271,
+      "import_result": {
+        "success": true,
+        "imported_count": 6,
+        "total_files": 6,
+        "message": "6/6 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO",
+      "folder_name": "07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO",
+      "processed_at": "2025-06-27T00:34:26.874475",
+      "status": "completed",
+      "files_found": 277,
+      "excel_files": 4,
+      "identified_files": [
+        {
+          "path": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO/DCE_VAL_DCE_DPGF/VAL-DCE_DPGF_VAL-DCE_DPGF Lot 01_MENUISERIES INTERIEURES.xlsx",
+          "name": "VAL-DCE_DPGF_VAL-DCE_DPGF Lot 01_MENUISERIES INTERIEURES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 34824,
+          "modified": "2025-06-02T07:01:30Z",
+          "created": "2025-06-04T07:17:02Z",
+          "sharepoint_id": "01Z5OKNPUU66RXIWVKIJDJ3QBZ4CTUUOPN",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B74A3F794-AA5A-4642-9DC0-39E0A74A39ED%7D&file=VAL-DCE_DPGF_VAL-DCE_DPGF%20Lot%2001_MENUISERIES%20INTERIEURES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO"
+        },
+        {
+          "path": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO/DCE_VAL_DCE_DPGF/VAL-DCE_DPGF_VAL-DCE_DPGF Lot 02_SERRURERIE - METALLERIE_IndA.xlsx",
+          "name": "VAL-DCE_DPGF_VAL-DCE_DPGF Lot 02_SERRURERIE - METALLERIE_IndA.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 42908,
+          "modified": "2025-06-02T07:01:30Z",
+          "created": "2025-06-04T07:17:01Z",
+          "sharepoint_id": "01Z5OKNPS7XUYTIZIT2FCZ5T355CASFPT6",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B3431BD5F-1365-45D1-9ECF-7DE88122BE7E%7D&file=VAL-DCE_DPGF_VAL-DCE_DPGF%20Lot%2002_SERRURERIE%20-%20METALLERIE_IndA.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO"
+        },
+        {
+          "path": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO/DCE_VAL_DCE_DPGF/VAL-DCE_DPGF_VAL-DCE_DPGF Lot 03_AGENCEMENT - MOBILIER.xlsx",
+          "name": "VAL-DCE_DPGF_VAL-DCE_DPGF Lot 03_AGENCEMENT - MOBILIER.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 39126,
+          "modified": "2025-06-02T07:01:30Z",
+          "created": "2025-06-04T07:17:00Z",
+          "sharepoint_id": "01Z5OKNPSYQHSPCQMJNNB224PAFLZFYNL3",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BF1E48158-8941-436B-AD71-E02AF25C357B%7D&file=VAL-DCE_DPGF_VAL-DCE_DPGF%20Lot%2003_AGENCEMENT%20-%20MOBILIER.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO"
+        }
+      ],
+      "errors": [],
+      "processing_time": 9.543769598007202,
+      "import_result": {
+        "success": true,
+        "imported_count": 3,
+        "total_files": 3,
+        "message": "3/3 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO",
+      "folder_name": "07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO",
+      "processed_at": "2025-06-27T00:35:37.534799",
+      "status": "completed",
+      "files_found": 489,
+      "excel_files": 9,
+      "identified_files": [
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_01_CCTP_LOT-2-6_ANNEXE TABLEAU DES MENUISERIES EXTERIEURES.xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_01_CCTP_LOT-2-6_ANNEXE TABLEAU DES MENUISERIES EXTERIEURES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 267317,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:36Z",
+          "sharepoint_id": "01Z5OKNPQW4FMJ26CGNBCISBN7ZKE7EGTX",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B9D58E116-4678-4468-8905-BFCA89F21A77%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_01_CCTP_LOT-2-6_ANNEXE%20TABLEAU%20DES%20MENUISERIES%20EXTERIEURES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        },
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_01_CCTP_LOT-2-7_ET_2-8_ANNEXE TABLEAU DES MENUISERIES INTERIEURES.xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_01_CCTP_LOT-2-7_ET_2-8_ANNEXE TABLEAU DES MENUISERIES INTERIEURES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 266260,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:34Z",
+          "sharepoint_id": "01Z5OKNPSSQKW5XUKQDZBL5MGAUX7AXMME",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BDBAD8252-50D1-421E-BEB0-C0A5FE0BB184%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_01_CCTP_LOT-2-7_ET_2-8_ANNEXE%20TABLEAU%20DES%20MENUISERIES%20INTERIEURES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        },
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-1_DESAMIANTAGE DEMOLITION DEPOSE.xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-1_DESAMIANTAGE DEMOLITION DEPOSE.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 306974,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:25Z",
+          "sharepoint_id": "01Z5OKNPVLZDEAXNOI4VFJUZ6YTO3FZRBB",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B0BC8C8AB-C8B5-4AE5-9A67-D89BB65CC421%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-1_DESAMIANTAGE%20DEMOLITION%20DEPOSE.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        },
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE METALLERIE.xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE METALLERIE.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 27963,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:23Z",
+          "sharepoint_id": "01Z5OKNPQ57KRVDGGRNNGLZIVXGXIEGM6V",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B51A3FA1D-D198-4C6B-BCA2-B735D04333D5%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE%20METALLERIE.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        },
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-5_ELEC.xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-5_ELEC.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 59392,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:20Z",
+          "sharepoint_id": "01Z5OKNPXZ3QQP7CDXUZGKEES4V65RFTUF",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BFF20DCF9-7788-4CA6-A212-5CAFBB12CE85%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-5_ELEC.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        },
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-6_ASCENSEURS.xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-6_ASCENSEURS.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 22718,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:19Z",
+          "sharepoint_id": "01Z5OKNPSTGY2ZFPDGKFEIKWP5RRH4GUNT",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B92353653-66BC-4851-8559-FD8C4FC351B3%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-6_ASCENSEURS.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        },
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-7_EQUIPEMENT CUISINE.xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-7_EQUIPEMENT CUISINE.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 816283,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:17Z",
+          "sharepoint_id": "01Z5OKNPV7KDTY4QBGCJBYEF3MGTT4P2KT",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B8EE750BF-2640-4312-8217-6C34E7C7E953%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-7_EQUIPEMENT%20CUISINE.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        },
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-8_VRD TERRAS AMENAGMT PAYSAG MOB EXT .xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-8_VRD TERRAS AMENAGMT PAYSAG MOB EXT .xlsx",
+          "type": "DPGF",
+          "confidence": 1.525,
+          "scores": {
+            "DPGF": 1.525,
+            "BPU": 0.7,
+            "DQE": 0.5599999999999999
+          },
+          "size": 40255,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:16Z",
+          "sharepoint_id": "01Z5OKNPQZVZWAHJRWHNF3GX6HSUCDEENG",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B036CAE19-36A6-4B3B-B35F-C795043211A6%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-8_VRD%20TERRAS%20AMENAGMT%20PAYSAG%20MOB%20EXT%20.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        },
+        {
+          "path": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO/AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-9_CLOTURE ET PORTAILS EXT.xlsx",
+          "name": "AWS-MPI-1655570-DCE_Pieces techniques_CCTP - DPGF_CER_DCE_02_DPGF_LOT-9_CLOTURE ET PORTAILS EXT.xlsx",
+          "type": "DPGF",
+          "confidence": 1.525,
+          "scores": {
+            "DPGF": 1.525,
+            "BPU": 0.7,
+            "DQE": 0.5599999999999999
+          },
+          "size": 25142,
+          "modified": "2025-06-02T13:42:18Z",
+          "created": "2025-06-04T07:14:14Z",
+          "sharepoint_id": "01Z5OKNPWNS5QELNLMTRCKRWPYZW65NDKH",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B456097CD-6CB5-449C-A8D9-F8CDBDD68D47%7D&file=AWS-MPI-1655570-DCE_Pieces%20techniques_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-9_CLOTURE%20ET%20PORTAILS%20EXT.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-CERGY-COLLEGE_DECONSTRUCTION_RECONSTRUCTION VNO"
+        }
+      ],
+      "errors": [],
+      "processing_time": 9.287912130355835,
+      "import_result": {
+        "success": true,
+        "imported_count": 9,
+        "total_files": 9,
+        "message": "9/9 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION",
+      "folder_name": "07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION",
+      "processed_at": "2025-06-27T00:36:37.542122",
+      "status": "completed",
+      "files_found": 491,
+      "excel_files": 9,
+      "identified_files": [
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_01_CCTP_LOT-2-6_ANNEXE TABLEAU DES MENUISERIES EXTERIEURES.xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_01_CCTP_LOT-2-6_ANNEXE TABLEAU DES MENUISERIES EXTERIEURES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 267317,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:17Z",
+          "sharepoint_id": "01Z5OKNPTLIY2ONCNZAJD2HNUTQMEOULBI",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BE634466B-B989-4702-A3B6-938308EA2C28%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_01_CCTP_LOT-2-6_ANNEXE%20TABLEAU%20DES%20MENUISERIES%20EXTERIEURES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        },
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_01_CCTP_LOT-2-7_ET_2-8_ANNEXE TABLEAU DES MENUISERIES INTERIEURES.xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_01_CCTP_LOT-2-7_ET_2-8_ANNEXE TABLEAU DES MENUISERIES INTERIEURES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 266260,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:16Z",
+          "sharepoint_id": "01Z5OKNPUPNSFUHZFFC5GLU52FQLM7FDCN",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B438B6C8F-A5E4-4C17-BA77-4582D9F28C4D%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_01_CCTP_LOT-2-7_ET_2-8_ANNEXE%20TABLEAU%20DES%20MENUISERIES%20INTERIEURES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        },
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-1_DESAMIANTAGE DEMOLITION DEPOSE.xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-1_DESAMIANTAGE DEMOLITION DEPOSE.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 306975,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:15Z",
+          "sharepoint_id": "01Z5OKNPXJBYYTQ4ORBFA2FGFTHHAEP63G",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B38310EE9-D171-4109-A298-B339C047FB66%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-1_DESAMIANTAGE%20DEMOLITION%20DEPOSE.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        },
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE METALLERIE.xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE METALLERIE.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 27963,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:14Z",
+          "sharepoint_id": "01Z5OKNPRUV4ZWF5EKRBGLULXLIRH2UCVU",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B6233AF34-8AF4-4C88-BA2E-EB444FAA0AB4%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE%20METALLERIE.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        },
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-5_ELEC.xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-5_ELEC.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 59392,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:14Z",
+          "sharepoint_id": "01Z5OKNPTEEKAO6I6R3RGYIYJB5XBQKW72",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BEF802264-D123-4DDC-8461-21EDC3055BFA%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-5_ELEC.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        },
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-6_ASCENSEURS.xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-6_ASCENSEURS.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 22718,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:14Z",
+          "sharepoint_id": "01Z5OKNPXROYZ27LAKJ5CLKATC5F5LOGYW",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BAF3376F1-0AAC-444F-B502-62E97AB71B16%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-6_ASCENSEURS.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        },
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-7_EQUIPEMENT CUISINE.xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-7_EQUIPEMENT CUISINE.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 816283,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:14Z",
+          "sharepoint_id": "01Z5OKNPT35AAHHXI6NBCLBTVJVFXBEVLR",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B7300E87B-1EDD-4468-B0CE-A9A96E125571%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-7_EQUIPEMENT%20CUISINE.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        },
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-8_VRD TERRAS AMENAGMT PAYSAG MOB EXT .xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-8_VRD TERRAS AMENAGMT PAYSAG MOB EXT .xlsx",
+          "type": "DPGF",
+          "confidence": 1.525,
+          "scores": {
+            "DPGF": 1.525,
+            "BPU": 0.7,
+            "DQE": 0.5599999999999999
+          },
+          "size": 40249,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:14Z",
+          "sharepoint_id": "01Z5OKNPXE2F2D3ADBIVH3OPT6ASW73YX7",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B3D74D1E4-6180-4F45-B73E-7E04ADFDE2FF%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-8_VRD%20TERRAS%20AMENAGMT%20PAYSAG%20MOB%20EXT%20.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        },
+        {
+          "path": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION/165570/165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-9_CLOTURE ET PORTAILS EXT.xlsx",
+          "name": "165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-9_CLOTURE ET PORTAILS EXT.xlsx",
+          "type": "DPGF",
+          "confidence": 1.525,
+          "scores": {
+            "DPGF": 1.525,
+            "BPU": 0.7,
+            "DQE": 0.5599999999999999
+          },
+          "size": 25137,
+          "modified": "2025-06-20T06:57:38Z",
+          "created": "2025-06-24T04:10:13Z",
+          "sharepoint_id": "01Z5OKNPSABY6TAH7R7NFY44JLCH7GPDJW",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B303D0E40-F11F-4BFB-8E71-2B11FE678D36%7D&file=165570_CCTP%20-%20DPGF_CER_DCE_02_DPGF_LOT-9_CLOTURE%20ET%20PORTAILS%20EXT.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-02-2025-COLLEGE_JUSTICE-CERGY-DECONSTRUCTION_RECONSTRUCTION"
+        }
+      ],
+      "errors": [],
+      "processing_time": 10.27366328239441,
+      "import_result": {
+        "success": true,
+        "imported_count": 9,
+        "total_files": 9,
+        "message": "9/9 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/07-03-2025-ICF_SNCF-MAINTENANCE_SERRURERIE",
+      "folder_name": "07-03-2025-ICF_SNCF-MAINTENANCE_SERRURERIE",
+      "processed_at": "2025-06-27T00:37:37.996489",
+      "status": "completed",
+      "files_found": 60,
+      "excel_files": 5,
+      "identified_files": [
+        {
+          "path": "/07-03-2025-ICF_SNCF-MAINTENANCE_SERRURERIE/ENTRETIEN ICF/ENTRETIEN ICF_LOT 46 - PARIS SEINE BIEVRE_00009 BPU - LOT 46.xlsx",
+          "name": "ENTRETIEN ICF_LOT 46 - PARIS SEINE BIEVRE_00009 BPU - LOT 46.xlsx",
+          "type": "BPU",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 0.0,
+            "BPU": 1.0,
+            "DQE": 0.0
+          },
+          "size": 69235,
+          "modified": "2025-06-05T06:40:30Z",
+          "created": "2025-06-05T10:51:15Z",
+          "sharepoint_id": "01Z5OKNPQPEDGMCIQBKJC3VQZZK5X57JPA",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BC1CC200F-0122-4552-BAC3-39576FDFA5E0%7D&file=ENTRETIEN%20ICF_LOT%2046%20-%20PARIS%20SEINE%20BIEVRE_00009%20BPU%20-%20LOT%2046.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-03-2025-ICF_SNCF-MAINTENANCE_SERRURERIE"
+        },
+        {
+          "path": "/07-03-2025-ICF_SNCF-MAINTENANCE_SERRURERIE/ENTRETIEN ICF/ENTRETIEN ICF_LOT 47 - PARIS GRAND OUEST_00009 BPU - LOT 47.xlsx",
+          "name": "ENTRETIEN ICF_LOT 47 - PARIS GRAND OUEST_00009 BPU - LOT 47.xlsx",
+          "type": "BPU",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 0.0,
+            "BPU": 1.0,
+            "DQE": 0.0
+          },
+          "size": 69161,
+          "modified": "2025-06-05T06:40:30Z",
+          "created": "2025-06-05T10:51:14Z",
+          "sharepoint_id": "01Z5OKNPTLBK3CVBI2XNHIO7P3C4KWWZG7",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B2AB60A6B-1A85-4EBB-877D-FB17156B64DF%7D&file=ENTRETIEN%20ICF_LOT%2047%20-%20PARIS%20GRAND%20OUEST_00009%20BPU%20-%20LOT%2047.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-03-2025-ICF_SNCF-MAINTENANCE_SERRURERIE"
+        },
+        {
+          "path": "/07-03-2025-ICF_SNCF-MAINTENANCE_SERRURERIE/ENTRETIEN ICF/ENTRETIEN ICF_LOT 48 - PARIS GRAND EST_00009 BPU - LOT 48.xlsx",
+          "name": "ENTRETIEN ICF_LOT 48 - PARIS GRAND EST_00009 BPU - LOT 48.xlsx",
+          "type": "BPU",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 0.0,
+            "BPU": 1.0,
+            "DQE": 0.0
+          },
+          "size": 69145,
+          "modified": "2025-06-05T06:40:30Z",
+          "created": "2025-06-05T10:51:13Z",
+          "sharepoint_id": "01Z5OKNPSVNJXYMQDUEZHZAJ5RXGG457JO",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B866F6A55-7440-4F26-9027-B1B98DCEFD2E%7D&file=ENTRETIEN%20ICF_LOT%2048%20-%20PARIS%20GRAND%20EST_00009%20BPU%20-%20LOT%2048.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-03-2025-ICF_SNCF-MAINTENANCE_SERRURERIE"
+        }
+      ],
+      "errors": [],
+      "processing_time": 3.403289556503296,
+      "import_result": {
+        "success": true,
+        "imported_count": 3,
+        "total_files": 3,
+        "message": "3/3 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE",
+      "folder_name": "07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE",
+      "processed_at": "2025-06-27T00:37:58.305461",
+      "status": "completed",
+      "files_found": 950,
+      "excel_files": 53,
+      "identified_files": [
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0100_CCTP_Annexes DPGF tableau portes en bois_ICE_DCE_0131_DPGF_Annexe_TableauPortesBois.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0100_CCTP_Annexes DPGF tableau portes en bois_ICE_DCE_0131_DPGF_Annexe_TableauPortesBois.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 116151,
+          "modified": "2025-06-20T06:33:24Z",
+          "created": "2025-06-24T04:13:25Z",
+          "sharepoint_id": "01Z5OKNPWYIYL5VUCL2VAYVYDXETXYYF6R",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BDA1746D8-4BD0-41D5-8AE0-7724EF8C17D1%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0100_CCTP_Annexes%20DPGF%20tableau%20portes%20en%20bois_ICE_DCE_0131_DPGF_Annexe_TableauPortesBois.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0100_CCTP_Annexes DPGF tableau portes métalliques_ICE_DCE_0132_DPGF_Annexe_TableauPortesMétal.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0100_CCTP_Annexes DPGF tableau portes métalliques_ICE_DCE_0132_DPGF_Annexe_TableauPortesMétal.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 37696,
+          "modified": "2025-06-20T06:33:24Z",
+          "created": "2025-06-24T04:13:24Z",
+          "sharepoint_id": "01Z5OKNPWIO2CF5NUBL5HITIKRP3YOR75H",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B5E8476C8-81B6-4E5F-89A1-517EF0E8FFA7%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0100_CCTP_Annexes%20DPGF%20tableau%20portes%20m%C3%A9talliques_ICE_DCE_0132_DPGF_Annexe_TableauPortesM%C3%A9tal.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0201_DPGF_LotPaysage.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0201_DPGF_LotPaysage.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 36483,
+          "modified": "2025-06-20T06:33:26Z",
+          "created": "2025-06-24T04:12:53Z",
+          "sharepoint_id": "01Z5OKNPQ5HM35DQLZAFELEX5MVC3KHH7T",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BD1373B1D-79C1-4801-B25F-ACA8B6A39FF3%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0200_DPGF_ICE_DCE_0201_DPGF_LotPaysage.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0202_DPGF_CE2aTERRASS-DEPOL.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0202_DPGF_CE2aTERRASS-DEPOL.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 24338,
+          "modified": "2025-06-20T06:33:26Z",
+          "created": "2025-06-24T04:12:53Z",
+          "sharepoint_id": "01Z5OKNPVN3QK5NVQIKRBKI2V3UN5ZQMHK",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BD615DCAD-08D6-4254-A46A-BBA37B9830EA%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0200_DPGF_ICE_DCE_0202_DPGF_CE2aTERRASS-DEPOL.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0203_DPGF_CE2bVRD.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0203_DPGF_CE2bVRD.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 25598,
+          "modified": "2025-06-20T06:33:26Z",
+          "created": "2025-06-24T04:12:53Z",
+          "sharepoint_id": "01Z5OKNPQQZHJG5NR3TVA2RZ5Q6G32WTYR",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B6ED2C910-3BB6-419D-A8E7-B0F1B7AB4F11%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0200_DPGF_ICE_DCE_0203_DPGF_CE2bVRD.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0204_DPGF_CE2cFONDATIONS SPECIALES.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0204_DPGF_CE2cFONDATIONS SPECIALES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 20652,
+          "modified": "2025-06-20T06:33:26Z",
+          "created": "2025-06-24T04:12:51Z",
+          "sharepoint_id": "01Z5OKNPRRJSHWFSKUS5DIDX4DRQVY2ID5",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B628F4C31-54C9-4697-81DF-838C2B8D207D%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0200_DPGF_ICE_DCE_0204_DPGF_CE2cFONDATIONS%20SPECIALES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0205_DPGF_CE2dGEOTHERMIE.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0205_DPGF_CE2dGEOTHERMIE.xlsx",
+          "type": "DPGF",
+          "confidence": 1.28,
+          "scores": {
+            "DPGF": 1.28,
+            "BPU": 0.2333333333333333,
+            "DQE": 0.42
+          },
+          "size": 19911,
+          "modified": "2025-06-20T06:33:26Z",
+          "created": "2025-06-24T04:12:50Z",
+          "sharepoint_id": "01Z5OKNPUWQ76YBQHLJ5A3E6BOXDLBILBN",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B80FD8796-EBC0-414F-B278-2EB8D6142C2D%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0200_DPGF_ICE_DCE_0205_DPGF_CE2dGEOTHERMIE.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0206_DPGF_CE2eGROS ŒUVRE- ENDUIT.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0206_DPGF_CE2eGROS ŒUVRE- ENDUIT.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 50138,
+          "modified": "2025-06-20T06:33:26Z",
+          "created": "2025-06-24T04:12:50Z",
+          "sharepoint_id": "01Z5OKNPVHAXNMSVADKVFKQOMVVQV7I62S",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BC9DA05A7-0354-4A55-A839-95AC2BF47B52%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0200_DPGF_ICE_DCE_0206_DPGF_CE2eGROS%20%C5%92UVRE-%20ENDUIT.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0207_DPGF_CE2fFOB-BARDAGE BOIS.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0207_DPGF_CE2fFOB-BARDAGE BOIS.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 33274,
+          "modified": "2025-06-20T06:33:26Z",
+          "created": "2025-06-24T04:12:49Z",
+          "sharepoint_id": "01Z5OKNPQBCEN264P3DJDY3EDUF7MP6UM4",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BAF1B1101-FB71-471A-8D90-742FD8FF519C%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0200_DPGF_ICE_DCE_0207_DPGF_CE2fFOB-BARDAGE%20BOIS.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        },
+        {
+          "path": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE/ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0208_DPGF_CE2gCM-COUVERTURE-BARDAGE.xlsx",
+          "name": "ICE - APHP - DOSSIER POUR ENTREPRISE_PIECES ECRITES_0200_DPGF_ICE_DCE_0208_DPGF_CE2gCM-COUVERTURE-BARDAGE.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 41086,
+          "modified": "2025-06-20T06:33:26Z",
+          "created": "2025-06-24T04:12:49Z",
+          "sharepoint_id": "01Z5OKNPQDIBTDYDYFPZBKKH3TLBB2RIHI",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B3C664003-050F-427E-A51F-735843A8A0E8%7D&file=ICE%20-%20APHP%20-%20DOSSIER%20POUR%20ENTREPRISE_PIECES%20ECRITES_0200_DPGF_ICE_DCE_0208_DPGF_CE2gCM-COUVERTURE-BARDAGE.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025- GCC - ICE - APHP - DOSSIER POUR ENTREPRISE"
+        }
+      ],
+      "errors": [],
+      "processing_time": 27.873758792877197,
+      "import_result": {
+        "success": true,
+        "imported_count": 10,
+        "total_files": 10,
+        "message": "10/10 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO",
+      "folder_name": "07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO",
+      "processed_at": "2025-06-27T00:39:21.007979",
+      "status": "completed",
+      "files_found": 253,
+      "excel_files": 7,
+      "identified_files": [
+        {
+          "path": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO/5- DPGF et annexes_DPGF LOT 01 - GROS OEUVRE - VRD  CHAPE - CARRELAGE - FAIENCE_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "name": "5- DPGF et annexes_DPGF LOT 01 - GROS OEUVRE - VRD  CHAPE - CARRELAGE - FAIENCE_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 33605,
+          "modified": "2025-06-04T04:06:04Z",
+          "created": "2025-06-04T07:08:09Z",
+          "sharepoint_id": "01Z5OKNPQC5IKUH3W56RBLPLYDJEUCC7W6",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B4315EA02-DDEE-42F4-B7AF-034928217EDE%7D&file=5-%20DPGF%20et%20annexes_DPGF%20LOT%2001%20-%20GROS%20OEUVRE%20-%20VRD%20%20CHAPE%20-%20CARRELAGE%20-%20FAIENCE_DCE_halleMarch%C3%A9_BOIS%20COLOMBES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO"
+        },
+        {
+          "path": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO/5- DPGF et annexes_DPGF LOT 02 - CHARPENTE - FOB ET BARDAGE BOIS_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "name": "5- DPGF et annexes_DPGF LOT 02 - CHARPENTE - FOB ET BARDAGE BOIS_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 27873,
+          "modified": "2025-06-04T04:06:04Z",
+          "created": "2025-06-04T07:08:09Z",
+          "sharepoint_id": "01Z5OKNPRYMP7U3KWLVBFZXB2NS4KF627B",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B4DFF6338-CBAA-4BA8-9B87-4D97145F6BE1%7D&file=5-%20DPGF%20et%20annexes_DPGF%20LOT%2002%20-%20CHARPENTE%20-%20FOB%20ET%20BARDAGE%20BOIS_DCE_halleMarch%C3%A9_BOIS%20COLOMBES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO"
+        },
+        {
+          "path": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO/5- DPGF et annexes_DPGF LOT 03 - COUVERTURE ZINC STRUCTURALE_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "name": "5- DPGF et annexes_DPGF LOT 03 - COUVERTURE ZINC STRUCTURALE_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 26265,
+          "modified": "2025-06-04T04:06:04Z",
+          "created": "2025-06-04T07:08:07Z",
+          "sharepoint_id": "01Z5OKNPTZSRE3CUREU5HIEFD7BWRW6HXP",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BB1499479-2452-4EA7-8214-7F0DA36F1EEF%7D&file=5-%20DPGF%20et%20annexes_DPGF%20LOT%2003%20-%20COUVERTURE%20ZINC%20STRUCTURALE_DCE_halleMarch%C3%A9_BOIS%20COLOMBES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO"
+        },
+        {
+          "path": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO/5- DPGF et annexes_DPGF LOT 04.xlsx",
+          "name": "5- DPGF et annexes_DPGF LOT 04.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 26672,
+          "modified": "2025-06-04T04:06:04Z",
+          "created": "2025-06-04T07:08:06Z",
+          "sharepoint_id": "01Z5OKNPTUHCZS64Z5Z5E2SOLAXQHDPVCU",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B2FB33874-3D73-49CF-A939-60BC0E37D454%7D&file=5-%20DPGF%20et%20annexes_DPGF%20LOT%2004.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO"
+        },
+        {
+          "path": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO/5- DPGF et annexes_DPGF LOT 05 - MENUISERIES INTERIEURES EN BOIS  CLOISONS SECHES - FAUX-PLAFONDS  PEINTURE - NETTOYAGE_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "name": "5- DPGF et annexes_DPGF LOT 05 - MENUISERIES INTERIEURES EN BOIS  CLOISONS SECHES - FAUX-PLAFONDS  PEINTURE - NETTOYAGE_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 29052,
+          "modified": "2025-06-04T04:06:04Z",
+          "created": "2025-06-04T07:08:06Z",
+          "sharepoint_id": "01Z5OKNPX3TZCHHFZ6ZZFLAXO7V66JUPWT",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B73449EFB-3E97-4ACE-B05D-DFAFBC9A3ED3%7D&file=5-%20DPGF%20et%20annexes_DPGF%20LOT%2005%20-%20MENUISERIES%20INTERIEURES%20EN%20BOIS%20%20CLOISONS%20SECHES%20-%20FAUX-PLAFONDS%20%20PEINTURE%20-%20NETTOYAGE_DCE_halleMarch%C3%A9_BOIS%20COLOMBES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO"
+        },
+        {
+          "path": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO/5- DPGF et annexes_DPGF LOT 06 - ASCENSEUR_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "name": "5- DPGF et annexes_DPGF LOT 06 - ASCENSEUR_DCE_halleMarché_BOIS COLOMBES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 23678,
+          "modified": "2025-06-04T04:06:04Z",
+          "created": "2025-06-04T07:08:06Z",
+          "sharepoint_id": "01Z5OKNPQRSFVLLFN2GVF3LA6RIZZQHIG2",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BB56A9111-BA95-4B35-B583-D1467303A0DA%7D&file=5-%20DPGF%20et%20annexes_DPGF%20LOT%2006%20-%20ASCENSEUR_DCE_halleMarch%C3%A9_BOIS%20COLOMBES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025-BOIS_COLOMBES-HALLE_DE_MARCHE VNO"
+        }
+      ],
+      "errors": [],
+      "processing_time": 5.714109659194946,
+      "import_result": {
+        "success": true,
+        "imported_count": 6,
+        "total_files": 6,
+        "message": "6/6 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/07-04-2025-CHAMARANDE- CONSTRUCTION-14LGT VNO",
+      "folder_name": "07-04-2025-CHAMARANDE- CONSTRUCTION-14LGT VNO",
+      "processed_at": "2025-06-27T00:40:02.247669",
+      "status": "completed",
+      "files_found": 159,
+      "excel_files": 1,
+      "identified_files": [
+        {
+          "path": "/07-04-2025-CHAMARANDE- CONSTRUCTION-14LGT VNO/commun_DPGF_15_Chamarande_DPGF_Complet Chamarande .xlsx",
+          "name": "commun_DPGF_15_Chamarande_DPGF_Complet Chamarande .xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 101261,
+          "modified": "2025-06-02T13:29:04Z",
+          "created": "2025-06-04T07:28:41Z",
+          "sharepoint_id": "01Z5OKNPWEJVTVVTHOBFD3XLMYA4VNFBX2",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B5A674DC4-EECC-4709-BBAD-98072AD286FA%7D&file=commun_DPGF_15_Chamarande_DPGF_Complet%20Chamarande%20.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-04-2025-CHAMARANDE- CONSTRUCTION-14LGT VNO"
+        }
+      ],
+      "errors": [],
+      "processing_time": 4.542529106140137,
+      "import_result": {
+        "success": true,
+        "imported_count": 1,
+        "total_files": 1,
+        "message": "1/1 fichiers importés"
+      }
+    }
+  ]
+}

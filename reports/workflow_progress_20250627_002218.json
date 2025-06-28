@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-27T00:22:18.934915",
+    "workflow_type": "optimized_folder_by_folder",
+    "configuration": {
+      "min_confidence": 0.3,
+      "max_files_per_folder": 1,
+      "batch_size": 1,
+      "deep_scan": false,
+      "auto_import": true
+    }
+  },
+  "statistics": {
+    "folders_processed": 1,
+    "folders_with_files": 1,
+    "total_files_found": 116,
+    "total_excel_files": 6,
+    "total_identified_files": 1,
+    "total_imported_files": 1,
+    "errors": [],
+    "start_time": "2025-06-27T00:21:45.630732",
+    "end_time": "2025-06-27T00:22:18.932704",
+    "total_processing_time": 33.301972
+  },
+  "detailed_results": [
+    {
+      "folder_path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE",
+      "folder_name": "06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE",
+      "processed_at": "2025-06-27T00:21:47.330179",
+      "status": "completed",
+      "files_found": 116,
+      "excel_files": 6,
+      "identified_files": [
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ASCENSEUR_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ASCENSEUR_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 266231,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:51:02Z",
+          "sharepoint_id": "01Z5OKNPUQXQSPIANUKFCIBGVUN6ZWNHHV",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BF424BC90-B401-4451-809A-B46FB3669CF5%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_ASCENSEUR_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        }
+      ],
+      "errors": [],
+      "processing_time": 27.624517917633057,
+      "import_result": {
+        "success": true,
+        "imported_count": 1,
+        "total_files": 1,
+        "message": "1/1 fichiers importés"
+      }
+    }
+  ]
+}

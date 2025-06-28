@@ -58,11 +58,12 @@ class GeminiCache:
     """Cache pour les résultats de classification Gemini"""
     def __init__(self, cache_dir=None):
         if cache_dir is None:
-            cache_dir = Path("cache")
-            if not cache_dir.exists():
-                cache_dir.mkdir(exist_ok=True)
+            self.cache_dir = Path("cache")
+            self.cache_dir.mkdir(exist_ok=True)
+        else:
+            self.cache_dir = cache_dir
         
-        self.cache_file = cache_dir / "gemini_patterns.pkl"
+        self.cache_file = self.cache_dir / "gemini_patterns.pkl"
         self.patterns = self._load_cache()
     
     def _load_cache(self):
@@ -71,8 +72,8 @@ class GeminiCache:
             try:
                 with open(self.cache_file, 'rb') as f:
                     return pickle.load(f)
-            except:
-                pass
+            except Exception as e:
+                print(f"Erreur lors du chargement du cache: {e}")
         return {}
     
     def _save_cache(self):
@@ -107,7 +108,7 @@ class GeminiProcessor:
     
     def __init__(self, api_key: str, chunk_size: int = 20):
         if not GEMINI_AVAILABLE:
-            raise ImportError("Le module google.generativeai n'est pas disponible")
+            raise ImportError("Module google.generativeai non disponible. L'analyse avancée par IA ne peut pas être utilisée.")
         
         self.api_key = api_key
         self.chunk_size = chunk_size
@@ -165,7 +166,7 @@ class GeminiProcessor:
             if response_text.startswith('```json'):
                 response_text = response_text.split('```json')[1].split('```')[0]
             elif response_text.startswith('```'):
-                response_text = response_text.split('```')[1]
+                response_text = response_text.split('```')[1].split('```')[0]
             
             result = json.loads(response_text.strip())
             print(f"Gemini a classifié {len(result)} lignes")
@@ -214,38 +215,19 @@ class ExcelParser:
         # Parcourir les 20 premières lignes
         for i in range(min(20, len(self.df))):
             for col in range(min(10, len(self.df.columns))):
-                if pd.notna(self.df.iloc[i, col]):
-                    cell_str = str(self.df.iloc[i, col]).strip()
-                    
-                    # Essayer chaque pattern
+                if col < len(self.df.columns) and pd.notna(self.df.iloc[i, col]):
+                    cell_text = str(self.df.iloc[i, col]).strip()
                     for pattern in lot_patterns:
-                        match = pattern.search(cell_str)
+                        match = pattern.search(cell_text)
                         if match:
-                            try:
-                                numero_lot = match.group(1).strip()
-                                # Nettoyer le numéro (enlever les caractères non numériques au début)
-                                numero_lot = re.sub(r'^[^0-9]+', '', numero_lot) 
-                                
-                                # S'assurer qu'il y a au moins un chiffre
-                                if not re.search(r'\d', numero_lot):
-                                    continue
-                                
-                                if len(match.groups()) > 1 and match.group(2):
-                                    nom_lot = match.group(2).strip()
-                                else:
-                                    nom_lot = f"Lot {numero_lot}"
-                                    
-                                print(f"✓ Lot détecté dans le contenu: {numero_lot} - {nom_lot}")
-                                lots.append((numero_lot, nom_lot))
-                                break
-                            except Exception as e:
-                                print(f"Erreur lors de la détection de lot: {e}")
+                            numero_lot = match.group(1).strip()
+                            nom_lot = match.group(2).strip() if len(match.groups()) > 1 else f"Lot {numero_lot}"
+                            lots.append((numero_lot, nom_lot))
         
         # Si aucun lot trouvé dans le contenu, essayer depuis le nom de fichier
         if not lots:
-            filename_lot = self.extract_lot_from_filename()
+            filename_lot = self.extract_lot_fromFilename()
             if filename_lot:
-                print(f"✓ Lot détecté dans le nom de fichier: {filename_lot[0]} - {filename_lot[1]}")
                 lots.append(filename_lot)
         
         # Nettoyer et dédupliquer les lots
@@ -257,7 +239,7 @@ class ExcelParser:
             clean_num = re.sub(r'[^\d\.]', '', lot_num)
             if not clean_num:
                 clean_num = lot_num  # Si rien ne reste, garder l'original
-                
+            
             if clean_num not in seen_nums:
                 seen_nums.add(clean_num)
                 cleaned_lots.append((clean_num, lot_name))
@@ -294,6 +276,7 @@ class ExcelParser:
             match = re.search(pattern, filename, re.IGNORECASE)
             if match:
                 numero_lot = match.group(1).strip()
+                nom_lot = ""
                 if len(match.groups()) > 1 and match.group(2):
                     nom_lot = match.group(2).strip()
                 else:
@@ -324,11 +307,9 @@ class ExcelParser:
         for i in range(min(15, len(self.df))):
             for col in range(min(5, len(self.df.columns))):  # Limiter aux 5 premières colonnes
                 if pd.notna(self.df.iloc[i, col]):
-                    cell_str = str(self.df.iloc[i, col]).strip()
-                    
-                    # Essayer chaque pattern
+                    cell_text = str(self.df.iloc[i, col]).lower()
                     for pattern in client_patterns:
-                        match = re.search(pattern, cell_str, re.IGNORECASE)
+                        match = re.search(pattern, cell_text, re.IGNORECASE)
                         if match:
                             client_name = match.group(1).strip()
                             print(f"✓ Client détecté: {client_name}")
@@ -736,7 +717,10 @@ class ExcelParser:
         return results
 
 
-class DPGFImportService:
+class ExcelParser:
+    # ... (classe existante)
+    
+    def _has_numeric_data(self, row):
         """
         Vérifie si la ligne contient des données numériques (prix, quantité)
         Vérifie également si les colonnes de prix contiennent des valeurs significatives
@@ -771,7 +755,8 @@ class DPGFImportService:
         return False
     
     def _is_section_pattern(self, text: str) -> bool:
-        """Vérifie si le texte correspond à un pattern de section"""        # Patterns pour les sections (similaires au script de production)
+        """Vérifie si le texte correspond à un pattern de section"""
+        # Patterns pour les sections (similaires au script de production)
         section_patterns = [
             r'^(\d+(?:\.\d+)*)\s+(.+)',  # Format numéroté (ex: "1.2 Section Title")
             r'^([A-Z][A-Z0-9\s\.\-\_]{3,})$',  # Titre en majuscules long
@@ -866,7 +851,7 @@ class DPGFImportService:
             'niveau_hierarchique': niveau
         }
     
-    def _extract_element_data(self, row, designation_text: str) -> Dict:
+def _extract_element_data(self, row, designation_text: str) -> Dict:
         """
         Extrait les données d'un élément d'ouvrage
         Sépare le numéro de la designation_exacte
@@ -946,10 +931,10 @@ class DPGFImportService:
         self.gemini = None
         if self.use_gemini:
             try:
-                self.gemini = GeminiProcessor(api_key=gemini_key, chunk_size=chunk_size)
-                print(f"✅ Mode IA activé: classification avec Gemini (chunks de {chunk_size} lignes)")
+                self.gemini = GeminiProcessor(gemini_key, chunk_size)
+                print("✅ Processeur Gemini initialisé")
             except Exception as e:
-                print(f"❌ Erreur initialisation Gemini: {e}")
+                print(f"⚠️ Impossible d'initialiser le processeur Gemini: {e}")
                 self.use_gemini = False
     
     def get_or_create_client(self, db: Session, client_name: str) -> int:
@@ -970,7 +955,7 @@ class DPGFImportService:
         clients = client_crud.get_clients(db)
         for client in clients:
             if client.nom_client.upper() == client_name.upper():
-                print(f"✅ Client existant trouvé: {client_name} (ID: {client.id_client})")
+                print(f"✅ Client existant réutilisé: {client_name} (ID: {client.id_client})")
                 return client.id_client
         
         # 2. Créer le client s'il n'existe pas
@@ -1003,35 +988,28 @@ class DPGFImportService:
         dpgfs = dpgf_crud.get_dpgfs(db)
         for dpgf in dpgfs:
             if dpgf.fichier_source == fichier_source and dpgf.id_client == client_id:
-                print(f"✅ DPGF existant trouvé (fichier source identique): {dpgf.nom_projet} (ID: {dpgf.id_dpgf})")
+                print(f"✅ DPGF existant trouvé: {dpgf.nom_projet} (ID: {dpgf.id_dpgf})")
                 return dpgf.id_dpgf
                 
         print(f"🆕 Aucun DPGF existant trouvé pour le fichier {fichier_source}. Création d'un nouveau DPGF.")
         
         # 2. Créer nouveau DPGF (toujours créer un nouveau pour chaque fichier unique)
         try:
-            # S'assurer que le nom du projet est unique en ajoutant le nom du fichier
-            if fichier_source not in nom_projet:
-                nom_projet_unique = f"{nom_projet} - {fichier_source}"
-            else:
-                nom_projet_unique = nom_projet
-                
-            # Créer le DPGF
             dpgf_create = DPGFCreate(
                 id_client=client_id,
-                nom_projet=nom_projet_unique,
+                nom_projet=nom_projet,
                 date_dpgf=date.today(),
                 statut_offre=StatutOffre.en_cours,
                 fichier_source=fichier_source
             )
-            
             new_dpgf = dpgf_crud.create_dpgf(db, dpgf_create)
             print(f"✅ Nouveau DPGF créé: {nom_projet} (ID: {new_dpgf.id_dpgf})")
             return new_dpgf.id_dpgf
             
         except Exception as e:
-            print(f"❌ Erreur création DPGF {nom_projet}: {e}")
+            print(f"❌ Erreur création DPGF: {e}")
             raise
+    
     def get_or_create_lot(self, db: Session, dpgf_id: int, numero_lot: str, nom_lot: str) -> int:
         """
         Récupère ou crée un lot dans la base de données
@@ -1045,14 +1023,20 @@ class DPGFImportService:
         Returns:
             ID du lot
         """
-        # 1. Vérifier si le lot existe déjà
-        # Récupérer tous les lots et filtrer manuellement par dpgf_id
-        all_lots = lot_crud.get_lots(db)
-        matching_lots = [lot for lot in all_lots if lot.id_dpgf == dpgf_id]
+        # Nettoyer le numéro de lot
+        numero_lot = str(numero_lot).strip()
+        if not numero_lot:
+            numero_lot = "1"  # Valeur par défaut si vide
+            
+        # Nettoyer le nom du lot
+        if not nom_lot or nom_lot.strip() == "":
+            nom_lot = f"Lot {numero_lot}"  # Nom par défaut
         
-        for lot in matching_lots:
+        # 1. Vérifier si un lot avec ce numéro existe déjà pour ce DPGF
+        lots = lot_crud.get_lots_by_dpgf(db, dpgf_id)
+        for lot in lots:
             if lot.numero_lot == numero_lot:
-                print(f"🔄 Lot existant réutilisé: {numero_lot} - {lot.nom_lot}")
+                print(f"✅ Lot existant réutilisé: {lot.numero_lot} - {lot.nom_lot} (ID: {lot.id_lot})")
                 self.stats.lots_reused += 1
                 return lot.id_lot
         
@@ -1074,251 +1058,258 @@ class DPGFImportService:
             
     def create_section(self, db: Session, lot_id: int, section_data: Dict) -> int:
         """
-        Crée une section unique ou la récupère si elle existe déjà
+        Crée une section ou la récupère si elle existe déjà (par numéro)
         
         Args:
             db: Session de base de données
             lot_id: ID du lot
-            section_data: Données de la section
+            section_data: Données de la section (numero_section, titre_section, niveau_hierarchique)
             
         Returns:
             ID de la section
         """
-        numero = section_data.get('numero_section', '')
-        niveau_hierarchique = section_data.get('niveau_hierarchique', 1)
+        # Valider les données requises
+        numero_section = section_data.get('numero_section', '')
+        titre_section = section_data.get('titre_section', '')
+        niveau = section_data.get('niveau_hierarchique', 1)
         
-        # S'assurer que le numéro de section ne dépasse pas 50 caractères (contrainte SQL)
-        if len(numero) > 50:
-            print(f"⚠️ Numéro de section trop long, troncature: '{numero[:47]}...'")
-            numero = numero[:47] + "..."
-        
-        # 1. Vérifier si une section avec ce numéro existe déjà dans ce lot
+        # Vérifier si une section avec ce numéro existe déjà
         sections = section_crud.get_sections_by_lot(db, lot_id)
         for section in sections:
-            if section.numero_section == numero:
-                print(f"🔄 Section existante réutilisée: {numero} - {section.titre_section}")
+            if section.numero_section == numero_section:
+                print(f"🔄 Section existante réutilisée: {numero_section} - {section.titre_section}")
                 self.stats.sections_reused += 1
                 return section.id_section
-                
-        # 2. Créer la section si elle n'existe pas
+        
+        # Créer la section si elle n'existe pas
         try:
             section_create = SectionCreate(
                 id_lot=lot_id,
-                numero_section=numero,
-                titre_section=section_data.get('titre_section', ''),
-                niveau_hierarchique=niveau_hierarchique
+                section_parent_id=None,  # Pas de hiérarchie pour l'instant
+                numero_section=numero_section,
+                titre_section=titre_section,
+                niveau_hierarchique=niveau
             )
-            
             new_section = section_crud.create_section(db, section_create)
-            print(f"✅ Nouvelle section créée: {numero} - {new_section.titre_section}")
+            print(f"➕ Nouvelle section créée: {numero_section} - {titre_section}")
             self.stats.sections_created += 1
             return new_section.id_section
+            
         except Exception as e:
-            print(f"❌ Erreur création section {numero}: {e}")
+            print(f"❌ Erreur création section {numero_section}: {e}")
+            self.stats.errors += 1
             raise
     
     def create_element(self, db: Session, section_id: int, element_data: Dict) -> int:
         """
-        Crée un élément d'ouvrage dans la base de données
+        Crée un élément d'ouvrage
         
         Args:
             db: Session de base de données
-            section_id: ID de la section
-            element_data: Données de l'élément
+            section_id: ID de la section parente
+            element_data: Données de l'élément (designation_exacte, unite, quantite, prix_unitaire_ht, prix_total_ht)
             
         Returns:
-            ID de l'élément
+            ID de l'élément créé
         """
+        # Valider et nettoyer les données
+        designation = element_data.get('designation_exacte', 'Description manquante')
+        unite = element_data.get('unite', '')[:10]  # Limiter à 10 caractères
+        
+        # Convertir les valeurs numériques avec gestion des cas None
+        def safe_float(val, default=0.0):
+            if val is None:
+                return default
+            try:
+                return float(val)
+            except (ValueError, TypeError):
+                return default
+        
+        quantite = safe_float(element_data.get('quantite'))
+        prix_unitaire = safe_float(element_data.get('prix_unitaire_ht'))
+        prix_total = safe_float(element_data.get('prix_total_ht'))
+        
+        # Si on a prix unitaire et quantité mais pas prix total, le calculer
+        if prix_total == 0 and prix_unitaire > 0 and quantite > 0:
+            prix_total = prix_unitaire * quantite
+            
+        # Créer l'élément d'ouvrage
         try:
             element_create = ElementOuvrageCreate(
                 id_section=section_id,
-                designation_exacte=element_data.get('designation_exacte', ''),
-                unite=element_data.get('unite', ''),
-                quantite=element_data.get('quantite', 0.0),
-                prix_unitaire_ht=element_data.get('prix_unitaire_ht', 0.0),
-                prix_total_ht=element_data.get('prix_total_ht', 0.0),
-                offre_acceptee=True  # Par défaut, l'offre est acceptée
+                designation_exacte=designation,
+                unite=unite,
+                quantite=quantite,
+                prix_unitaire_ht=prix_unitaire,
+                prix_total_ht=prix_total,
+                offre_acceptee=False
             )
-              # La classification Gemini est ignorée car les champs ont été retirés du modèle
-            # Note : Nous gardons tout de même la détection pour éviter de modifier trop de code
-            
-            new_element = element_crud.create_element(db, element_create)
-            print(f"✅ Nouvel élément créé: {new_element.designation_exacte[:20]}...")
+            new_element = element_crud.create_element_ouvrage(db, element_create)
+            print(f"➕ Nouvel élément créé: {designation[:30]}..." if len(designation) > 30 else designation)
             self.stats.elements_created += 1
-            return new_element.id_element
+            return new_element.id_element_ouvrage
             
         except Exception as e:
             print(f"❌ Erreur création élément: {e}")
+            self.stats.errors += 1
             raise
     
-    def classify_with_gemini(self, description: str) -> Dict[str, str]:
+    def import_file(self, db: Session, file_path: str, client_name: Optional[str] = None):
         """
-        Utilise Gemini pour classifier un élément d'ouvrage
-        
-        Args:
-            description: Description de l'élément
-            
-        Returns:
-            Dictionnaire avec la classification
-        """
-        if not self.use_gemini or not self.gemini:
-            return {}
-        
-        try:
-            result = self.gemini.classify_descriptions([description])
-            if result and len(result) > 0:                # Retourner un dictionnaire vide car les champs de classification ont été retirés
-                # Nous gardons la structure pour éviter de modifier trop de code
-                return {}
-        except Exception as e:
-            print(f"⚠️ Erreur classification Gemini: {e}")
-        
-        return {}
-    
-    def import_file(self, db: Session, file_path: str, dpgf_id: Optional[int] = None, lot_num: Optional[str] = None) -> int:
-        """
-        Importe un fichier DPGF complet
+        Importe un fichier DPGF dans la base de données
         
         Args:
             db: Session de base de données
-            file_path: Chemin du fichier DPGF
-            dpgf_id: ID du DPGF existant (optionnel)
-            lot_num: Numéro du lot (optionnel)
+            file_path: Chemin du fichier Excel
+            client_name: Nom du client (optionnel, détecté automatiquement si non fourni)
             
         Returns:
-            ID du DPGF créé ou mis à jour
+            ID du DPGF importé
         """
-        try:
-            # 1. Analyser le fichier
-            parser = ExcelParser(file_path)
-            
-            # 2. Détecter le client
+        print(f"🔄 Import du fichier {file_path}")
+        self.stats = ImportStats()  # Réinitialiser les stats
+        
+        # 1. Parser le fichier Excel
+        parser = ExcelParser(file_path)
+        
+        # 2. Détecter ou utiliser le client
+        if not client_name:
             client_name = parser.find_client_name()
-            client_id = self.get_or_create_client(db, client_name)
+        client_id = self.get_or_create_client(db, client_name)
+        
+        # 3. Créer le DPGF
+        projet_name = f"Projet {client_name} - {Path(file_path).stem}"
+        dpgf_id = self.get_or_create_dpgf(db, client_id, projet_name, file_path)
+        
+        # 4. Détecter les lots
+        lot_headers = parser.find_lot_headers()
+        
+        # Si aucun lot n'est trouvé, créer un lot par défaut
+        if not lot_headers:
+            lot_headers = [("1", f"Lot principal {Path(file_path).stem}")]
+            print(f"⚠️ Aucun lot détecté, création d'un lot par défaut")
+        
+        # Pour chaque lot trouvé
+        for numero_lot, nom_lot in lot_headers:
+            print(f"\n📋 Traitement du lot {numero_lot} - {nom_lot}")
             
-            # 3. Créer ou récupérer le DPGF
-            if not dpgf_id:
-                # Utiliser le nom du fichier comme nom de projet par défaut
-                nom_projet = Path(file_path).stem
-                dpgf_id = self.get_or_create_dpgf(db, client_id, nom_projet, file_path)
+            # Créer/récupérer le lot
+            lot_id = self.get_or_create_lot(db, dpgf_id, numero_lot, nom_lot)
             
-            # 4. Trouver les lots
-            if lot_num:
-                # Si le lot est spécifié en paramètre
-                print(f"Utilisation du lot spécifié: {lot_num}")
-                lots = [(lot_num, f"Lot {lot_num}")]
-            else:
-                # Sinon, détecter les lots dans le fichier
-                lots = parser.find_lot_headers()
-                
-            if not lots:
-                # Si aucun lot n'est trouvé, utiliser un lot par défaut
-                lot_default = ("1", "Lot par défaut")
-                print(f"⚠️ Aucun lot trouvé, utilisation du lot par défaut: {lot_default[0]} - {lot_default[1]}")
-                lots = [lot_default]
+            # Détecter l'en-tête et les colonnes
+            header_row = parser.find_header_row()
+            if not parser.headers_detected:
+                parser.detect_column_indices(header_row)
             
-            # 5. Créer les lots et importer les sections/éléments
-            lot_id = None
-            for numero_lot, nom_lot in lots:
-                # Créer le lot
-                lot_id = self.get_or_create_lot(db, dpgf_id, numero_lot, nom_lot)
-                
-                # Détecter les sections et éléments
-                items = parser.detect_sections_and_elements()
-                
-                if len(items) == 0:
-                    print(f"⚠️ Aucune section ou élément détecté dans le fichier")
-                    continue
-                
-                # Séparer sections et éléments pour un traitement plus contrôlé
-                sections = [item for item in items if item.get('type') == 'section']
-                elements = [item for item in items if item.get('type') == 'element']
-                
-                print(f"Sections détectées: {len(sections)}")
-                print(f"Éléments détectés: {len(elements)}")
-                
-                # Carte des sections par position (row)
-                section_positions = {section['row']: section for section in sections}
-                
-                # Créer d'abord toutes les sections
-                section_ids = {}  # map row -> section_id
-                sections_by_row = {}  # Stocke les positions des sections
-                
-                # Si aucune section n'est trouvée mais qu'on a des éléments, créer une section par défaut
-                if not sections and elements:
-                    print("⚠️ Aucune section trouvée mais des éléments existent. Création d'une section par défaut.")
-                    default_section_data = {
-                        'numero_section': '1',
-                        'titre_section': 'Section par défaut',
-                        'niveau_hierarchique': 1
-                    }
-                    default_section_id = self.create_section(db, lot_id, default_section_data)
-                    # Utiliser une position fictive (-1) pour la section par défaut
-                    section_ids[-1] = default_section_id
-                    sections_by_row[-1] = -1  # Pour indiquer qu'elle est au début
-                
-                for section in sections:
-                    try:
-                        section_id = self.create_section(db, lot_id, section['data'])
-                        section_ids[section['row']] = section_id
-                        sections_by_row[section['row']] = section['row']
-                    except Exception as e:
-                        print(f"❌ Erreur section ligne {section['row']}: {e}")
-                        self.stats.errors += 1
-                
-                # Si aucune section n'a été créée, passer au lot suivant
-                if not section_ids:
-                    print(f"⚠️ Aucune section créée pour le lot {numero_lot}")
-                    continue
-                
-                # Trier les positions des sections
-                sorted_section_rows = sorted(sections_by_row.keys())
-                
-                # Pour chaque élément, trouver la section précédente la plus proche
-                for element in elements:
-                    try:
-                        # Trouver la section précédente la plus proche
-                        element_row = element['row']
-                        prev_section_row = -1  # Section par défaut
+            # Analyser le fichier pour extraire sections et éléments
+            items = parser.detect_sections_and_elements(header_row)
+            
+            # Organiser les sections et éléments
+            current_section_id = None
+            for item in items:
+                try:
+                    if item['type'] == 'section':
+                        # Créer/récupérer la section
+                        section_id = self.create_section(db, lot_id, item['data'])
+                        current_section_id = section_id
+                    
+                    elif item['type'] == 'element' and current_section_id:
+                        # Créer l'élément
+                        self.create_element(db, current_section_id, item['data'])
                         
-                        for section_row in sorted_section_rows:
-                            if section_row > element_row:
-                                break
-                            prev_section_row = section_row
-                        
-                        # Si on a trouvé une section pour cet élément
-                        if prev_section_row in section_ids:
-                            section_id = section_ids[prev_section_row]
-                            
-                            # Classification Gemini optionnelle
-                            if self.use_gemini:
-                                description = element['data'].get('designation_exacte', '')
-                                classification = self.classify_with_gemini(description)
-                                element['data']['classification'] = classification
-                            
-                            # Créer l'élément
-                            self.create_element(db, section_id, element['data'])
-                        else:
-                            print(f"⚠️ Élément ligne {element_row} ignoré: pas de section trouvée")
-                            
-                    except Exception as e:
-                        print(f"❌ Erreur élément ligne {element['row']}: {e}")
-                        self.stats.errors += 1
+                except Exception as e:
+                    print(f"❌ Erreur traitement ligne {item.get('row', '?')}: {e}")
+                    self.stats.errors += 1
+                
+                self.stats.total_rows += 1
+        
+        # Afficher les statistiques finales
+        print(f"\n✅ Import terminé pour {file_path}")
+        print(f"   - Lignes traitées: {self.stats.total_rows}")
+        print(f"   - Lots créés: {self.stats.lots_created} (réutilisés: {self.stats.lots_reused})")
+        print(f"   - Sections créées: {self.stats.sections_created} (réutilisées: {self.stats.sections_reused})")
+        print(f"   - Éléments créés: {self.stats.elements_created}")
+        print(f"   - Erreurs: {self.stats.errors}")
+        
+        if self.use_gemini:
+            print(f"   - Appels Gemini: {self.gemini.stats.gemini_calls}")
+            print(f"   - Cache hits Gemini: {self.gemini.stats.cache_hits}")
+        
+        return dpgf_id
+    
+    def extract_data_from_file(self, file_path: str, auto_detect: bool = True) -> Dict[str, Any]:
+        """
+        Extrait les données d'un fichier DPGF sans les importer en base
+        
+        Args:
+            file_path: Chemin du fichier à analyser
+            auto_detect: Si True, tente de détecter automatiquement le client, projet et lot
             
-            # 6. Afficher les statistiques
-            print(f"\n✅ Import terminé:")
-            print(f"   - Lots créés: {self.stats.lots_created}, réutilisés: {self.stats.lots_reused}")
-            print(f"   - Sections créées: {self.stats.sections_created}, réutilisées: {self.stats.sections_reused}")
-            print(f"   - Éléments créés: {self.stats.elements_created}")
-            print(f"   - Erreurs: {self.stats.errors}")
+        Returns:
+            Un dictionnaire contenant les données structurées du DPGF
+        """
+        print(f"Extraction des données depuis {file_path}")
+        
+        # Initialiser les résultats
+        results = {
+            "client": None,
+            "lots": [],
+            "sections": [],
+            "elements": []
+        }
+        
+        try:
+            # Vérifier que le fichier existe
+            if not os.path.exists(file_path):
+                print(f"❌ Fichier non trouvé: {file_path}")
+                return results
+                
+            # Lire le fichier Excel
+            print("Lecture du fichier Excel...")
+            df = pd.read_excel(file_path, engine='openpyxl', header=None)
             
-            if self.use_gemini:
-                print(f"   - Appels Gemini: {self.stats.gemini_calls}")
-                print(f"   - Cache hits: {self.stats.cache_hits}")
+            if df.empty:
+                print("❌ Fichier Excel vide")
+                return results
+                
+            print(f"✅ Fichier chargé. {len(df)} lignes trouvées")
             
-            return dpgf_id
+            # 1. Détection du client et projet (uniquement si auto_detect=True)
+            client_info = None
+            if auto_detect:
+                client_info = self._detect_client_info(df)
+                if client_info:
+                    results["client"] = client_info
+            
+            # 2. Détecter les colonnes du DPGF
+            col_mapping = self._detect_columns(df)
+            if not col_mapping:
+                print("❌ Structure de colonnes non reconnue")
+                return results
+            
+            # 3. Détecter le lot si auto_detect=True
+            lot_info = None
+            if auto_detect:
+                lot_info = self._detect_lot_info(df, file_path)
+                if lot_info:
+                    results["lots"].append(lot_info)
+            
+            # 4. Parser les sections et éléments d'ouvrage
+            sections, elements = self._parse_sections_and_elements(
+                df, 
+                col_mapping,
+                lot_id=None  # Pas de lot_id car on ne crée pas en base
+            )
+            
+            # Ajouter les sections et éléments aux résultats
+            results["sections"] = [s.dict() for s in sections]
+            results["elements"] = [e.dict() for e in elements]
+            
+            print(f"✅ Extraction terminée: {len(sections)} sections, {len(elements)} éléments")
+            return results
             
         except Exception as e:
-            print(f"❌ Erreur critique: {e}")
+            print(f"❌ Erreur lors de l'extraction des données: {str(e)}")
             import traceback
             traceback.print_exc()
-            return None
+            return results

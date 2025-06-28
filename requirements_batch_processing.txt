@@ -1,0 +1,36 @@
+# Dépendances supplémentaires pour le traitement optimisé par lots
+# Installation: pip install -r requirements_batch_processing.txt
+
+# Modules déjà présents dans requirements_sharepoint.txt
+# requests
+# pandas
+# openpyxl
+# python-dotenv
+# msal
+
+# Ajouts pour le traitement par lots optimisé
+psutil>=5.9.0           # Monitoring des ressources système
+rich>=13.0.0           # Interface utilisateur enrichie pour le monitoring
+colorama>=0.4.6        # Support couleurs cross-platform
+tqdm>=4.64.0           # Barres de progression supplémentaires
+click>=8.0.0           # Interface ligne de commande améliorée
+
+# Monitoring et logging avancés
+structlog>=22.0.0      # Logging structuré
+prometheus-client>=0.15.0  # Métriques Prometheus (optionnel)
+
+# Gestion des erreurs et retry
+tenacity>=8.0.0        # Gestion des tentatives et retry
+backoff>=2.2.0         # Backoff exponentiel
+
+# Optimisation mémoire
+memory-profiler>=0.60.0  # Profiling mémoire (optionnel)
+pympler>=0.9           # Analyse mémoire détaillée (optionnel)
+
+# Compression et archivage
+lz4>=4.0.0             # Compression rapide pour les caches
+zstandard>=0.19.0      # Compression avancée (optionnel)
+
+# Configuration et validation
+pydantic>=1.10.0       # Validation de configuration
+jsonschema>=4.17.0     # Validation JSON Schema

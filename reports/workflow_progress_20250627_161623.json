@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-27T16:16:23.414539",
+    "workflow_type": "optimized_folder_by_folder",
+    "configuration": {
+      "min_confidence": 0.3,
+      "max_files_per_folder": 2,
+      "batch_size": 1,
+      "deep_scan": true,
+      "auto_import": false
+    }
+  },
+  "statistics": {
+    "folders_processed": 1,
+    "folders_with_files": 0,
+    "total_files_found": 1072,
+    "total_excel_files": 42,
+    "total_identified_files": 0,
+    "total_imported_files": 0,
+    "errors": [],
+    "start_time": "2025-06-27T16:15:59.680495",
+    "end_time": "2025-06-27T16:16:23.405608",
+    "total_processing_time": 23.725113
+  },
+  "detailed_results": [
+    {
+      "folder_path": "/0. A ENREGISTER SUR OPTIM",
+      "folder_name": "0. A ENREGISTER SUR OPTIM",
+      "processed_at": "2025-06-27T16:16:00.251620",
+      "status": "completed",
+      "files_found": 1072,
+      "excel_files": 42,
+      "identified_files": [],
+      "errors": [],
+      "processing_time": 23.153987407684326
+    }
+  ]
+}

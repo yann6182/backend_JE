@@ -114,3 +114,35 @@ def create_section(db: Session, section: SectionCreate) -> Section:
 def delete_section(db: Session, section_id: int) -> None:
     db.query(Section).filter(Section.id_section == section_id).delete()
     db.commit()
+
+
+def get_section_path(db: Session, section_id: int) -> str:
+    """
+    Génère le chemin complet d'une section (section parent -> section enfant)
+    
+    Args:
+        db: Session de base de données
+        section_id: ID de la section
+        
+    Returns:
+        Chemin complet de la section
+    """
+    section = get_section(db, section_id)
+    if not section:
+        return "Section inconnue"
+    
+    path_parts = []
+    current_section = section
+    
+    # Remonter la hiérarchie des sections
+    while current_section:
+        section_title = current_section.titre_section or f"Section {current_section.numero_section}"
+        path_parts.insert(0, section_title)
+        
+        # Chercher la section parent
+        if current_section.section_parent_id:
+            current_section = get_section(db, current_section.section_parent_id)
+        else:
+            break
+    
+    return " → ".join(path_parts)

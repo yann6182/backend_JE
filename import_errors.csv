@@ -1,0 +1,55 @@
+timestamp,filename,line_number,error_type,error_message,raw_data
+2025-06-27T17:19:51.459354,02_2024_024_BPU_lot_7.xlsx,0,CRITICAL_ERROR,500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/api/v1/lots/,Script failure
+2025-06-27T17:25:54.696429,3296-DCE-DPGF-Lot 02 GROS OEUVRE.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T17:25:57.135563,3296-DCE-DPGF-Lot 03 ETANCHEITE.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T17:25:59.385994,3296-DCE-DPGF-Lot 04 FACADES.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T17:26:01.958683,3296-DCE-DPGF-Lot 05 MENUISERIES EXT PROTECTIONS SOLAIRES.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T17:26:04.324971,3296-DCE-DPGF-Lot 06 PLATRERIE PLAFONDS.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T17:26:06.622963,3296-DCE-DPGF-Lot 07 MENUISERIES INTERIEURES - SIGNALETIQUE.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T17:26:08.847193,3296-DCE-DPGF-Lot 08 MOBILIERS.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T17:26:11.138381,3296-DCE-DPGF-Lot 09 REVET SOLS - PEINTURE.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T17:45:46.809120,DPGF Lot 04 - Charpente Bois_Fermettes.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-27T17:45:49.083415,DPGF Lot 05_Couverture Zinguerie_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-27T18:22:58.930649,3296-DCE-DPGF-Lot 02 GROS OEUVRE.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T18:23:01.302821,3296-DCE-DPGF-Lot 03 ETANCHEITE.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T18:23:03.814982,3296-DCE-DPGF-Lot 04 FACADES.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T18:23:06.228298,3296-DCE-DPGF-Lot 05 MENUISERIES EXT PROTECTIONS SOLAIRES.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T18:23:08.640117,3296-DCE-DPGF-Lot 06 PLATRERIE PLAFONDS.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T18:23:10.991050,3296-DCE-DPGF-Lot 07 MENUISERIES INTERIEURES - SIGNALETIQUE.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T18:23:13.268995,3296-DCE-DPGF-Lot 08 MOBILIERS.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T18:23:16.142974,3296-DCE-DPGF-Lot 09 REVET SOLS - PEINTURE.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T18:43:38.566271,tmpf3cvfs65.xlsx,0,CRITICAL_ERROR,500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/api/v1/lots/,Script failure
+2025-06-27T18:44:46.649129,tmpc2cioe3u.xlsx,0,CRITICAL_ERROR,list index out of range,Script failure
+2025-06-27T19:05:01.080939,DPGF Lot 04 - Charpente Bois_Fermettes.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-27T19:05:03.190772,DPGF Lot 05_Couverture Zinguerie_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-27T19:39:39.678022,DPGF Lot 04 - Charpente Bois_Fermettes.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-27T19:39:41.767975,DPGF Lot 05_Couverture Zinguerie_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-27T20:33:28.918324,OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ASCENSEUR_DPGF_A.xlsx,0,CRITICAL_ERROR,Aucun lot trouvé dans le fichier et aucun numéro de lot spécifié,Script failure
+2025-06-27T20:33:31.429421,OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_CVC_DPGF_A.xlsx,0,CRITICAL_ERROR,Aucun lot trouvé dans le fichier et aucun numéro de lot spécifié,Script failure
+2025-06-27T20:33:33.913601,OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ELECTRICITE_DPGF_A.xlsx,0,CRITICAL_ERROR,Aucun lot trouvé dans le fichier et aucun numéro de lot spécifié,Script failure
+2025-06-27T22:17:33.876749,C.0A - DPGF LOT A - DECONSTRUCTION DESAMIANTAGE - ind A.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:17:36.062330,C.1 - DPGF LOT 01 - INSTALLATION DE CHANTIER STRUCTURE BETON VRD - ind A.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:17:38.138241,C.10 - DPGF LOT 10 - METALLERIE SERRURERIE - ind A.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:17:50.324552,C.0A - DPGF LOT A - DECONSTRUCTION DESAMIANTAGE - ind A.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:17:52.511572,C.1 - DPGF LOT 01 - INSTALLATION DE CHANTIER STRUCTURE BETON VRD - ind A.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:17:54.673688,C.10 - DPGF LOT 10 - METALLERIE SERRURERIE - ind A.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:29:20.660105,EHPAD Lasserre DCE 2025-01 AO Travaux_04_PIECES ECRITES_P10 Cadres de Bordereau DPGF_3681-DCE-DPGF-Lot 01 - Structure - Charpente metallique - Charpente bois.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:29:22.713616,EHPAD Lasserre DCE 2025-01 AO Travaux_04_PIECES ECRITES_P10 Cadres de Bordereau DPGF_3681-DCE-DPGF-Lot 02 - Etancheite.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:29:24.822777,EHPAD Lasserre DCE 2025-01 AO Travaux_04_PIECES ECRITES_P10 Cadres de Bordereau DPGF_3681-DCE-DPGF-Lot 03 - Facades.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:50:15.739196,PAUL BERT VISITE_Dossier_MOE_B_Dossier_technique_04_CDPGF_2515009_021_Tableau_portes_20250619.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-27T22:52:46.265883,25S019 - DCE - maj_25S019 - PIECES TECHNIQUES_25S019 - PIECES PROPRES A CHAQUE LOT_25S019 - LOT 1 - DESA - DEPLOMB_25S019 - DPGF LOT 01 - DESA - DEPLOMB.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-28T12:58:32.633836,3296-DCE-DPGF-Lot 12-Chauffage - Ventilation - Climatisation - Desenfumage.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-28T12:58:46.056123,3296-DCE-DPGF-Lot 15-Terrassements - VRD.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-28T12:59:07.089320,AWS-MPI-1655574-DCE_10_CDPGF_5_DCE-CDPGF Lot 5 PLB CVC.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-28T12:59:09.104328,AWS-MPI-1655574-DCE_10_CDPGF_6_DCE-CDPGF Lot 6 Elec.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-28T13:31:57.985165,DPGF Lot 04 - Charpente Bois_Fermettes.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-28T13:32:00.061265,DPGF Lot 05_Couverture Zinguerie_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-28T13:32:10.038963,DPGF_Lot_13_Chape_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-28T13:32:12.102065,DPGF_Lot_14_Carrelage_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-28T13:32:14.378838,DPGF_Lot_15_Revetement de sols souples_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-28T13:32:16.494925,DPGF_Lot_16_Parquet_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-28T13:32:18.526945,DPGF_Lot_17_Ascenceur_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-28T13:32:20.600211,DPGF Lot 08 SERRURERIE.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-06-28T13:32:22.739522,DPGF Lot 08 SERRURERIE-SEF-IND A.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-28T13:32:24.737073,M-2023-118-GHT GPNE-IFSI-DCE-DPGF-CVP.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-06-28T13:32:26.734618,M-2023-118-GHT GPNE-IFSI-DCE-DPGF-ELEC.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure

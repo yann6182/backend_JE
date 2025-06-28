@@ -1,0 +1,73 @@
+{
+  "description": "Configuration du workflow DPGF automatisé",
+  "version": "1.0",
+  
+  "sharepoint": {
+    "url": "https://sef92230.sharepoint.com/sites/etudes/Documents%20partages",
+    "exclude_dirs": "Archives,Temp,Backup"
+  },
+  
+  "scanning": {
+    "min_confidence": 0.5,
+    "max_files": 50,
+    "deep_scan": true,
+    "batch_size": 10
+  },
+  
+  "download": {
+    "batch_processing": true,
+    "use_optimized_batches": true,
+    "auto_cleanup": true,
+    "batch_size": 10,
+    "max_batch_size_mb": 100,
+    "max_memory_mb": 2048,
+    "max_disk_mb": 1024,
+    "retry_count": 3,
+    "timeout_seconds": 300
+  },
+  
+  "import": {
+    "api_base_url": "http://127.0.0.1:8000",
+    "chunk_size": 100,
+    "max_workers": 4,
+    "parallel_import": false,
+    "use_gemini": true,
+    "gemini_model": "gemini-1.5-flash"
+  },
+  
+  "workflow": {
+    "work_dir": "dpgf_workflow",
+    "auto_cleanup": false,
+    "generate_reports": true,
+    "email_notifications": false
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "max_log_size_mb": 10,
+    "backup_count": 5
+  },
+  
+  "filters": {
+    "allowed_extensions": [".xlsx", ".xls", ".xlsm"],
+    "min_file_size_kb": 10,
+    "max_file_size_mb": 100,
+    "keywords_required": ["DPGF", "BPU", "DQE", "LOT"],
+    "keywords_excluded": ["TEMPLATE", "EXEMPLE", "TEST"]
+  },
+  
+  "notifications": {
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.company.com",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "recipients": ["admin@company.com"]
+    },
+    "webhook": {
+      "enabled": false,
+      "url": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+    }
+  }
+}

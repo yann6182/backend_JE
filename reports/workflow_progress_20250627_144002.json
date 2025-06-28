@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-27T14:40:02.826444",
+    "workflow_type": "optimized_folder_by_folder",
+    "configuration": {
+      "min_confidence": 0.3,
+      "max_files_per_folder": 3,
+      "batch_size": 1,
+      "deep_scan": false,
+      "auto_import": true
+    }
+  },
+  "statistics": {
+    "folders_processed": 3,
+    "folders_with_files": 2,
+    "total_files_found": 405,
+    "total_excel_files": 10,
+    "total_identified_files": 5,
+    "total_imported_files": 5,
+    "errors": [],
+    "start_time": "2025-06-27T14:39:06.396188",
+    "end_time": "2025-06-27T14:40:02.822764",
+    "total_processing_time": 56.426576
+  },
+  "detailed_results": [
+    {
+      "folder_path": "/06-26-2025-CARTIER",
+      "folder_name": "06-26-2025-CARTIER",
+      "processed_at": "2025-06-27T14:39:07.091668",
+      "status": "completed",
+      "files_found": 12,
+      "excel_files": 0,
+      "identified_files": [],
+      "errors": [],
+      "processing_time": 0.5739078521728516
+    },
+    {
+      "folder_path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE",
+      "folder_name": "06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE",
+      "processed_at": "2025-06-27T14:39:07.665575",
+      "status": "completed",
+      "files_found": 116,
+      "excel_files": 6,
+      "identified_files": [
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ASCENSEUR_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ASCENSEUR_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 266231,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:51:02Z",
+          "sharepoint_id": "01Z5OKNPUQXQSPIANUKFCIBGVUN6ZWNHHV",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BF424BC90-B401-4451-809A-B46FB3669CF5%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_ASCENSEUR_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        },
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_CVC_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_CVC_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 204912,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:51:01Z",
+          "sharepoint_id": "01Z5OKNPW7T4Q4RT2365FYBMCCO7HN4Y4T",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7BC8219FDF-5BCF-4BF7-80B0-4277CEDE6393%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_CVC_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        },
+        {
+          "path": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE/01_PE/OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ELECTRICITE_DPGF_A.xlsx",
+          "name": "OPUSIA_SAEMES_HECTOR MALOT_PRO DCE_ELECTRICITE_DPGF_A.xlsx",
+          "type": "DPGF",
+          "confidence": 0.5,
+          "scores": {
+            "DPGF": 0.5,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 254110,
+          "modified": "2025-05-28T06:20:49Z",
+          "created": "2025-06-07T10:50:58Z",
+          "sharepoint_id": "01Z5OKNPTUBCXIFCWRERFJ77DYFEDJMDFI",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B82AE0874-D18A-4A24-9FFC-782906960CA8%7D&file=OPUSIA_SAEMES_HECTOR%20MALOT_PRO%20DCE_ELECTRICITE_DPGF_A.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/06-30-2025-PARIS 12 PARKING HECTOR MALOT VOE"
+        }
+      ],
+      "errors": [],
+      "processing_time": 9.409767150878906,
+      "import_result": {
+        "success": true,
+        "imported_count": 3,
+        "total_files": 3,
+        "message": "3/3 fichiers importés"
+      }
+    },
+    {
+      "folder_path": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO",
+      "folder_name": "07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO",
+      "processed_at": "2025-06-27T14:39:32.618605",
+      "status": "completed",
+      "files_found": 277,
+      "excel_files": 4,
+      "identified_files": [
+        {
+          "path": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO/DCE_VAL_DCE_DPGF/VAL-DCE_DPGF_VAL-DCE_DPGF Lot 01_MENUISERIES INTERIEURES.xlsx",
+          "name": "VAL-DCE_DPGF_VAL-DCE_DPGF Lot 01_MENUISERIES INTERIEURES.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 34824,
+          "modified": "2025-06-02T07:01:30Z",
+          "created": "2025-06-04T07:17:02Z",
+          "sharepoint_id": "01Z5OKNPUU66RXIWVKIJDJ3QBZ4CTUUOPN",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B74A3F794-AA5A-4642-9DC0-39E0A74A39ED%7D&file=VAL-DCE_DPGF_VAL-DCE_DPGF%20Lot%2001_MENUISERIES%20INTERIEURES.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO"
+        },
+        {
+          "path": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO/DCE_VAL_DCE_DPGF/VAL-DCE_DPGF_VAL-DCE_DPGF Lot 02_SERRURERIE - METALLERIE_IndA.xlsx",
+          "name": "VAL-DCE_DPGF_VAL-DCE_DPGF Lot 02_SERRURERIE - METALLERIE_IndA.xlsx",
+          "type": "DPGF",
+          "confidence": 1.0,
+          "scores": {
+            "DPGF": 1.0,
+            "BPU": 0.0,
+            "DQE": 0.0
+          },
+          "size": 42908,
+          "modified": "2025-06-02T07:01:30Z",
+          "created": "2025-06-04T07:17:01Z",
+          "sharepoint_id": "01Z5OKNPS7XUYTIZIT2FCZ5T355CASFPT6",
+          "web_url": "https://sef92230.sharepoint.com/sites/etudes/_layouts/15/Doc.aspx?sourcedoc=%7B3431BD5F-1365-45D1-9ECF-7DE88122BE7E%7D&file=VAL-DCE_DPGF_VAL-DCE_DPGF%20Lot%2002_SERRURERIE%20-%20METALLERIE_IndA.xlsx&action=default&mobileredirect=true",
+          "source": "sharepoint",
+          "folder": "/07-01-2025-VALENTON-CONSTRUCTION-EDUC_CULTUREL VNO"
+        }
+      ],
+      "errors": [],
+      "processing_time": 12.682132244110107,
+      "import_result": {
+        "success": true,
+        "imported_count": 2,
+        "total_files": 2,
+        "message": "2/2 fichiers importés"
+      }
+    }
+  ]
+}
