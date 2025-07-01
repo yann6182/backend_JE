@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 from app.api.v1 import client, dpgf, lot, section, element_ouvrage, dpgf_analysis
-
 app = FastAPI(title='DPGF API')
 
 # Configure CORS

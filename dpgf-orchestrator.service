@@ -1,0 +1,15 @@
+[Unit]
+Description=DPGF SharePoint Orchestrator
+After=network.target
+
+[Service]
+Type=simple
+User=dpgf
+WorkingDirectory=D:\CH4\backend_JE
+ExecStart=D:\CH4\backend_JE\venv\scripts\python.exe sharepoint_orchestrator.py scheduled
+Restart=always
+RestartSec=10
+Environment=PYTHONPATH=D:\CH4\backend_JE
+
+[Install]
+WantedBy=multi-user.target

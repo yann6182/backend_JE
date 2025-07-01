@@ -557,3 +557,133 @@ Pour toute question ou problème :
 2. Consultez la documentation Swagger à `http://localhost:8000/docs`
 3. Vérifiez les logs du serveur pour les erreurs détaillées
 4. Assurez-vous que CORS est bien configuré pour votre domaine frontend
+
+## Endpoints API
+
+### Recherche d'éléments d'ouvrage
+
+#### Recherche multicritères
+
+```
+GET /api/v1/element-search/search/
+```
+
+Permet de rechercher des éléments d'ouvrage avec filtrage multicritères et tri personnalisé.
+
+**Paramètres de requête**:
+- `q` (optionnel): Texte de recherche (recherche dans la désignation et description)
+- `client_id` (optionnel): ID du client pour filtrer les éléments
+- `dpgf_id` (optionnel): ID du DPGF pour filtrer les éléments
+- `lot_id` (optionnel): ID du lot pour filtrer les éléments
+- `section_id` (optionnel): ID de la section pour filtrer les éléments
+- `lot_numero` (optionnel): Numéro de lot pour filtrer les éléments
+- `min_price` (optionnel): Prix unitaire minimum
+- `max_price` (optionnel): Prix unitaire maximum
+- `sort_by` (optionnel, défaut="relevance"): Critère de tri, valeurs possibles: 
+  - `relevance`: Par pertinence (défaut, uniquement si `q` est fourni)
+  - `price`: Par prix unitaire
+  - `date`: Par date de création
+  - `designation`: Par ordre alphabétique de désignation
+  - `dpgf`: Par nom du DPGF
+  - `lot`: Par numéro et nom du lot
+  - `section`: Par numéro et nom de la section
+- `descending` (optionnel, défaut=true): Ordre décroissant si true, croissant si false
+- `limit` (optionnel, défaut=100): Nombre maximum de résultats (1-500)
+- `offset` (optionnel, défaut=0): Décalage pour la pagination
+
+**Exemple de réponse**:
+```json
+{
+  "total": 158,
+  "offset": 0,
+  "limit": 100,
+  "results": [
+    {
+      "id": 123,
+      "designation": "Béton de fondation",
+      "description": "Béton dosé à 350kg/m3",
+      "unite": "m³",
+      "quantite": 15.5,
+      "prix_unitaire": 120.0,
+      "prix_total": 1860.0,
+      "lot": {
+        "id": 5,
+        "numero": "03",
+        "nom": "Gros œuvre"
+      },
+      "section": {
+        "id": 12,
+        "numero": "3.2",
+        "titre": "Fondations"
+      },
+      "dpgf": {
+        "id": 3,
+        "nom": "Projet Résidence ABC"
+      },
+      "client": {
+        "id": 2,
+        "nom": "Client XYZ"
+      },
+      "created_at": "2025-06-20T15:30:45",
+      "updated_at": "2025-06-21T10:15:20"
+    },
+    // ... autres éléments ...
+  ]
+}
+```
+
+#### Suggestions de recherche
+
+```
+GET /api/v1/element-search/suggestions/
+```
+
+Retourne des suggestions de recherche basées sur un texte partiel pour l'autocomplétion.
+
+**Paramètres de requête**:
+- `q` (requis): Texte partiel pour les suggestions (minimum 2 caractères)
+- `limit` (optionnel, défaut=10): Nombre maximum de suggestions (1-20)
+
+**Exemple de réponse**:
+```json
+[
+  "Béton de fondation",
+  "Béton armé",
+  "Béton de propreté",
+  "Béton désactivé"
+]
+```
+
+#### Statistiques des éléments
+
+```
+GET /api/v1/element-search/statistics/
+```
+
+Retourne des statistiques sur les éléments d'ouvrage, éventuellement filtrées.
+
+**Paramètres de requête**:
+- `client_id` (optionnel): Filtrer par client
+- `dpgf_id` (optionnel): Filtrer par DPGF
+- `lot_id` (optionnel): Filtrer par lot
+
+**Exemple de réponse**:
+```json
+{
+  "total_count": 1245,
+  "price_statistics": {
+    "min_price": 0.5,
+    "max_price": 15000.0,
+    "avg_price": 257.85,
+    "total_price": 321023.25
+  },
+  "units": {
+    "m²": 458,
+    "m³": 156,
+    "ml": 125,
+    "u": 387,
+    "kg": 68,
+    "ens": 51
+  }
+}
+```
