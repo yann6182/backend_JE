@@ -1,0 +1,129 @@
+{
+  "title": "API de recherche d'éléments d'ouvrage",
+  "description": "Endpoints pour la recherche avancée d'éléments d'ouvrage avec correspondance approximative et analyse des prix",
+  "base_url": "http://localhost:8000/api/v1",
+  "endpoints": [
+    {
+      "path": "/element_ouvrages/search/fuzzy",
+      "method": "GET",
+      "description": "Recherche d'éléments par correspondance approximative sur la désignation",
+      "parameters": [
+        {
+          "name": "designation",
+          "type": "string",
+          "required": true,
+          "description": "Terme de recherche"
+        },
+        {
+          "name": "min_similarity",
+          "type": "integer",
+          "required": false,
+          "default": 70,
+          "description": "Score minimum (0-100)"
+        },
+        {
+          "name": "max_results",
+          "type": "integer",
+          "required": false,
+          "default": 10,
+          "description": "Nombre max de résultats"
+        }
+      ],
+      "response_example": {
+        "id_element": 123,
+        "designation_exacte": "Béton de propreté dosé à 250 kg/m3",
+        "unite": "m3",
+        "prix_unitaire_ht": 85.5,
+        "similarity_score": 95,
+        "projet_nom": "Construction école",
+        "annee": 2024
+      }
+    },
+    {
+      "path": "/element_ouvrages/search/price-analysis",
+      "method": "GET",
+      "description": "Analyse des prix historiques pour une désignation",
+      "parameters": [
+        {
+          "name": "designation",
+          "type": "string",
+          "required": true,
+          "description": "Terme de recherche"
+        },
+        {
+          "name": "min_similarity",
+          "type": "integer",
+          "required": false,
+          "default": 70,
+          "description": "Score minimum"
+        }
+      ],
+      "response_example": {
+        "designation_query": "béton",
+        "elements_found": 25,
+        "overall_stats": {
+          "average_price": 87.3,
+          "min_price": 65.0,
+          "max_price": 120.0
+        },
+        "yearly_averages": {
+          "2023": {
+            "average_price": 85.0,
+            "count": 12
+          },
+          "2024": {
+            "average_price": 90.0,
+            "count": 13
+          }
+        }
+      }
+    },
+    {
+      "path": "/element_ouvrages/search/similar-price",
+      "method": "GET",
+      "description": "Trouve des éléments avec des prix similaires",
+      "parameters": [
+        {
+          "name": "target_price",
+          "type": "float",
+          "required": true,
+          "description": "Prix cible"
+        },
+        {
+          "name": "unite",
+          "type": "string",
+          "required": false,
+          "description": "Unité spécifique"
+        },
+        {
+          "name": "tolerance_percent",
+          "type": "float",
+          "required": false,
+          "default": 20.0,
+          "description": "Tolérance %"
+        },
+        {
+          "name": "max_results",
+          "type": "integer",
+          "required": false,
+          "default": 20,
+          "description": "Nombre max de résultats"
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "title": "Recherche d'éléments similaires à 'fondation'",
+      "url": "/element_ouvrages/search/fuzzy?designation=fondation&min_similarity=80&max_results=5"
+    },
+    {
+      "title": "Analyse prix historiques pour 'charpente'",
+      "url": "/element_ouvrages/search/price-analysis?designation=charpente&min_similarity=75"
+    },
+    {
+      "title": "Éléments avec prix autour de 150€",
+      "url": "/element_ouvrages/search/similar-price?target_price=150.0&tolerance_percent=15.0"
+    }
+  ]
+}
