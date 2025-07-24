@@ -34,3 +34,30 @@ curl -X POST "http://localhost:8000/api/v1/clients/" -H "Content-Type: applicati
 ```
 
 La documentation interactive Swagger est accessible sur `http://localhost:8000/docs`.
+
+## Identification automatique des fichiers DPGF, BPU et DQE
+
+Le script `scripts/identify_relevant_files.py` permet d'identifier automatiquement les fichiers pertinents (DPGF, BPU, DQE) parmi une grande quantité de données.
+
+### Utilisation
+
+```bash
+python scripts/identify_relevant_files.py --source-dir "chemin/vers/donnees" --output-dir "chemin/vers/dossier/resultats" [options]
+```
+
+### Options disponibles
+
+- `--source-dir` : Répertoire source contenant les fichiers à analyser (obligatoire)
+- `--output-dir` : Répertoire où enregistrer les résultats et les fichiers identifiés (obligatoire)
+- `--copy-files` : Copier les fichiers identifiés vers le répertoire de sortie 
+- `--deep-scan` : Effectuer une analyse approfondie du contenu des fichiers (plus lent mais plus précis)
+- `--exclude-dirs` : Liste de dossiers à exclure, séparés par des virgules
+- `--log-file` : Fichier pour enregistrer les logs (par défaut: identification_results.log)
+
+### Exemple
+
+```bash
+python scripts/identify_relevant_files.py --source-dir "D:/Projets" --output-dir "D:/Fichiers_Identifies" --copy-files --deep-scan
+```
+
+Cette commande analysera tous les fichiers Excel dans le répertoire "D:/Projets", identifiera les DPGF, BPU et DQE, et copiera les fichiers pertinents dans "D:/Fichiers_Identifies".

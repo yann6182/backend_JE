@@ -2,8 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
-from app.api.v1 import client, dpgf, lot, section, element_ouvrage
-
+from app.api.v1 import client, dpgf, lot, section, element_ouvrage, dpgf_analysis
 app = FastAPI(title='DPGF API')
 
 # Configure CORS
@@ -25,3 +24,4 @@ app.include_router(dpgf.router, prefix='/api/v1')
 app.include_router(lot.router, prefix='/api/v1')
 app.include_router(section.router, prefix='/api/v1')
 app.include_router(element_ouvrage.router, prefix='/api/v1')
+app.include_router(dpgf_analysis.router, prefix='/api/v1')

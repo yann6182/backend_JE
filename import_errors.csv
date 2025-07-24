@@ -1,0 +1,33 @@
+timestamp,filename,line_number,error_type,error_message,raw_data
+2025-07-07T18:15:51.331989,165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-1_DESAMIANTAGE DEMOLITION DEPOSE.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:15:53.974894,165570_CCTP - DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE METALLERIE.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:15:56.642526,DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE METALLERIE - ind A.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:15:59.465073,DPGF_CER_DCE_02_DPGF_LOT-3_SERRURERIE METALLERIE.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:02.201431,5- DPGF et annexes_DPGF LOT 01 - GROS OEUVRE - VRD  CHAPE - CARRELAGE - FAIENCE_DCE_halleMarche_BOIS COLOMBES.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:04.983591,5- DPGF et annexes_DPGF LOT 02 - CHARPENTE - FOB ET BARDAGE BOIS_DCE_halleMarche_BOIS COLOMBES.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:07.583269,5- DPGF et annexes_DPGF LOT 03 - COUVERTURE ZINC STRUCTURALE_DCE_halleMarche_BOIS COLOMBES.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:10.069394,5- DPGF et annexes_DPGF LOT 04.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:12.901955,5- DPGF et annexes_DPGF LOT 05 - MENUISERIES INTERIEURES EN BOIS  CLOISONS SECHES - FAUX-PLAFONDS  PEINTURE - NETTOYAGE_DCE_halleMarche_BOIS COLOMBES.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:15.502217,5- DPGF et annexes_DPGF LOT 06 - ASCENSEUR_DCE_halleMarche_BOIS COLOMBES.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:17.995217,5- DPGF et annexes_DPGF LOT 04.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:20.632043,5- DPGF et annexes_DPGF LOT 04-ind A.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:22.713616,commun_DPGF_15_Chamarande_DPGF_Complet Chamarande .xlsx,0,CRITICAL_ERROR,[Errno 2] No such file or directory: 'D:\\CH4\\backend_JE\\logs\\commun_DPGF_15_Chamarande_DPGF_Complet Chamarande \\import_20250707_181622.log',Script failure
+2025-07-07T18:16:25.172571,DPGF V2.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:27.661037,902 NFH231940 Auto Evaluation Alertes 2025 02 10.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:16:30.135199,903 SATIPREV Evaluation DCE_OUTIL RE2020_ind A.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:26:30.715122,25S012 - DPGF -Lot4.xlsx,0,CRITICAL_ERROR,'ExcelParser' object has no attribute 'is_sharepoint',Script failure
+2025-07-07T18:41:07.206078,2989 - MASSY JEAN MOULIN - DPGF LOTS ARCHITECTURAUX.xls,0,CRITICAL_ERROR,[Errno 13] Permission denied: 'logs\\2989 - MASSY JEAN MOULIN - DPGF LOTS ARCHITECTURAUX.xls',Script failure
+2025-07-07T18:53:27.797399,2989 - MASSY JEAN MOULIN - DPGF LOTS ARCHITECTURAUX.xls,0,CRITICAL_ERROR,[Errno 13] Permission denied: 'logs\\2989 - MASSY JEAN MOULIN - DPGF LOTS ARCHITECTURAUX.xls',Script failure
+2025-07-07T18:55:30.787330,3296-DCE-DPGF-Lot 12-Chauffage - Ventilation - Climatisation - Desenfumage.xls,0,CRITICAL_ERROR,[Errno 13] Permission denied: 'logs\\3296-DCE-DPGF-Lot 12-Chauffage - Ventilation - Climatisation - Desenfumage.xls',Script failure
+2025-07-07T19:59:25.395896,commun_DPGF_15_Chamarande_DPGF_Complet Chamarande .xlsx,0,CRITICAL_ERROR,[Errno 2] No such file or directory: 'D:\\CH4\\backend_JE\\logs\\commun_DPGF_15_Chamarande_DPGF_Complet Chamarande \\import_20250707_195924.log',Script failure
+2025-07-07T20:31:25.168716,DPGF Lot 04 - Charpente Bois_Fermettes.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-07-07T20:31:27.320963,DPGF Lot 05_Couverture Zinguerie_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-07-07T20:31:36.826444,DPGF_Lot_13_Chape_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-07-07T20:31:39.003604,DPGF_Lot_14_Carrelage_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-07-07T20:31:41.167018,DPGF_Lot_15_Revetement de sols souples_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-07-07T20:31:43.294903,DPGF_Lot_16_Parquet_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-07-07T20:31:45.490714,DPGF_Lot_17_Ascenceur_Indice C.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-07-07T20:31:47.647899,DPGF Lot 08 SERRURERIE.xls.xlsx,0,CRITICAL_ERROR,File contains no valid workbook part,Script failure
+2025-07-07T20:31:49.777553,DPGF Lot 08 SERRURERIE-SEF-IND A.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-07-07T20:31:51.903534,M-2023-118-GHT GPNE-IFSI-DCE-DPGF-CVP.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure
+2025-07-07T20:31:54.039695,M-2023-118-GHT GPNE-IFSI-DCE-DPGF-ELEC.xls.xlsx,0,CRITICAL_ERROR,File is not a zip file,Script failure

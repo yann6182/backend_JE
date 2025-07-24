@@ -1,0 +1,34 @@
+{
+  "orchestrator": {
+    "name": "DPGF SharePoint Orchestrator",
+    "version": "1.0.0",
+    "description": "Orchestrateur automatique pour l'import de fichiers DPGF depuis SharePoint"
+  },
+  "sharepoint": {
+    "library_name": "Documents DPGF",
+    "file_filters": [
+      ".xlsx",
+      ".xls"
+    ],
+    "check_interval_minutes": 60,
+    "max_file_size_mb": 50
+  },
+  "processing": {
+    "timeout_seconds": 600,
+    "retry_attempts": 3,
+    "concurrent_files": 1
+  },
+  "monitoring": {
+    "log_level": "INFO",
+    "max_log_files": 30,
+    "send_notifications": true,
+    "notification_on_error": true,
+    "daily_report": true,
+    "daily_report_time": "08:00"
+  },
+  "database": {
+    "connection_pool_size": 5,
+    "max_overflow": 10,
+    "pool_timeout": 30
+  }
+}

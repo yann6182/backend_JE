@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-07-01T03:12:47.380761",
+  "logs_analyzed": 4,
+  "statistics": {
+    "log_files_analyzed": 4,
+    "total_lines": 298
+  },
+  "files_by_status": {},
+  "problematic_files": [],
+  "top_issues": [],
+  "recommendations": [],
+  "detailed_issues": [],
+  "file_details": {},
+  "analyzed_logs": [
+    "performance_optimization.log",
+    "orchestration_dpgf.log",
+    "orchestration_dpgf.log",
+    "dpgf_import.log"
+  ]
+}

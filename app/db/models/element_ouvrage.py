@@ -1,10 +1,10 @@
 from sqlalchemy import Integer, String, DECIMAL, Boolean, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+from typing import Optional
 from app.db.base import Base
 
 class ElementOuvrage(Base):
-    __tablename__ = 'elements_ouvrage'
-
+    __tablename__ = 'elements_ouvrage'    
     id_element: Mapped[int] = mapped_column(Integer, primary_key=True)
     id_section: Mapped[int] = mapped_column(ForeignKey('sections.id_section'))
     designation_exacte: Mapped[str] = mapped_column(String(255), nullable=False)
